@@ -1,0 +1,53 @@
+---
+title: "On the transferability and accessibility of human movement data"
+---
+
+## Introduction
+Human motion capture is a suite of technologies and techniques to record a motion modality (i.e., position, speed, or acceleration) of the human moving parts and their environment, with extensive uses in movement science, rehabilitation, sports, and entertainment. However, the heterogeneity of the recorded modality and the spatial and temporal resolutions of the recordings make the utility and interpretability of the motion capture recordings challenging. [some examples of the importance and use of such helpful interpretability].
+
+Motion capture is a general term for acquiring a motion-related physical quantity (i.e., motion modality), such as position, speed, acceleration, etc. [talk about the fundamental differences between having each quantity.]
+
+Technologies related to motion capture mainly record one of the physical quantities, while the rest could, in theory, be driven by differentiation and integration coupled with some constraints. [talk about different techs, passive active marker-based, IMUs, ToF and dot projection, video cameras, and deep learning]
+
+Limitations of each method for motion capture manifest in the interpretability and transferability of the data from one modality to another. [brief discussions about the limitations]. A solution to address these limitations is an adequate and precise annotation of the features affecting the motion capture interpretation quality. 
+
+Here we 1. briefly describe the main features of each modality. 2. We then discuss the annotations required for each modality that would adequately help with the interpretability of the motion capture data. 3. We finally introduce a set of best practices in defining coordinate systems and sensor placement schemes that would provide a framework for the interpretability of the motion capture data from one modality to another.
+
+
+## Types of motion capture
+In the following chapter we will introduce three main types of motion capture systems, what type of data they record and the limits of transferability between them. We will also include how current specifications of sensor placements are done.
+
+**Optical Motion Capture (OMC)**:
+Marker based optical motion capture systems utilize multiple cameras to track the movement of reflective markers placed on a subject's body or objects. These markers reflect light emitted by the cameras, allowing the system to triangulate their positions in three-dimensional space. The cameras record the positions of these markers at high frame rates, typically capturing data on marker positions (POS) and, optionally, orientation (ORNT). Additionally, velocity (VEL), acceleration (ACCEL), and angular acceleration (ANGACCEL) data can be derived from the marker positions over time. The placement of markers should usually define marker type, size, and shape, along with their specific placement on anatomical landmarks or reference points, often including joints, limb segments, and other relevant locations. 
+
+**Inertial Measurement Units (IMUs)**:
+Inertial measurement units consist of small sensors, including accelerometers, gyroscopes, and sometimes magnetometers, attached to a subject's body. IMUs measure changes in acceleration, angular velocity, and magnetic field strength, allowing them to record acceleration (ACCEL), angular acceleration (ANGACCEL), velocity (VEL), and orientation (ORNT). IMUs are compact and versatile, making them suitable for wearable applications, such as sports performance analysis and motion tracking in remote or outdoor environments. Positioning of the IMU on the human body should contain information about the location and orientation. The location often follows free form text and the orientation is described using photos or some kind of orientation in relation to the body part it is attached to.
+
+**Markerless Motion Capture**:
+Markerless motion capture systems rely on algorithms to track a subject's movements without the need for physical markers. These systems use cameras to capture video footage of the subject, and then some form of software processes the images to extract data on position (POS), orientation (ORNT), and sometimes velocity (VEL) and acceleration (ACCEL). Markerless motion capture is advantageous for its non-invasive nature and ability to capture natural movement, making it popular in the fields of entertainment, biomechanics, and human-computer interaction. The definition of the tracked points is often closely bound to the software and which points it allows to be tracked.
+
+## Definitions
+**Space** 
+[in BIDS terms] BIDS defines “space”  as an artificial frame of reference, created to describe different anatomies in a unifying manner (see Appendix VIII). However, data collected in studies of physical or virtual motion usually have a reference frame that is anchored to the physical lab space or the virtual environment.  
+
+**Reference frame**
+A reference frame, or a frame of reference is an abstract coordinate system whose origin, orientation, and scale are specified by a set of reference points (Kovalevsky & Mueller, 1989). Here we interpret the concept of reference frame as a broad description of the type of the space, or the context that the data is associated with. It relates to whether the space itself is fixed or moving (global or local reference frame), or the identity of the object it moves with. For example, an anatomical reference frame is fixed to the body and moves when the body itself moves through space. 
+
+**Coordinate system**
+Examples : Cartesian coordinates, polar coordinates, and spherical coordinates.
+A coordinate system is fully described by (1) the origin, (2) the interpretation of the axes, and (3) the units. 
+
+[in BIDS terms] A coordinate system in BIDS comprises of the information about (1) the origin relative to which the coordinate is expressed, (2) the interpretation of the three axes, and (3) the units in which the numbers are expressed
+
+Coordinate systems
+Motion data can be expressed within different coordinate systems associated with different frames of reference. The type of reference frame that requires the most detailed description is the anatomical, body-based reference frames. 
+
+Reference frames can have a hierarchical structure where one reference frame is nested within another. For example, the position of the torso can be expressed in a coordinate system within the room reference frame, the arm position relative to the torso, and the hand position relative to the arm. In biomechanics …
+
+We refer to the reference frame that is at the top level of this hierarchy as the “global” reference frame. The global reference frame can be associated with the space through which the entire body moves, allowing the location of the person to be expressed as a position within that space. This representation is useful in scenarios where the location of the person in space is relevant rather than their posture or limb motion. For example, in spatial cognition research … 
+
+## Anatomical coordinate system for each rigid body part (Julius)
+Axis per body part are defined in the table, with position of fiducials and span from start (-50) to end (50). A dataset with both IMU and optical markers is used as an example. 
+
+## Unified placement scheme
+The most common types of motion data are acceleration, angular acceleration, joint angles, magnetic field strength, orientation and position. Each type has different requirements for sensor placement. We want to present a way of encoding the marker location and orientation so that it can be unified across different data sets. …

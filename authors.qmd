@@ -1,0 +1,24 @@
+---
+title: "Authors"
+---
+
+<style>
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+</style>
+
+## Sein Jeung
+Sein is investigating human spatial cognition using mobile EEG at the [Berlin Mobile Brain-Body Imaging Lab](https://blogs.tu-berlin.de/bpn_bemobil/) & [Doellerlab](https://doellerlab.com/). She is a dedicated Open Science enthusiast!
+
+![](pics/sein.jpg){ width=50% class=center }
+
+## Julius Welzel
+Julius has completed his masters in 2019 in Cognitive Neuropsychology in Oldenburg, Germany and is still pursuing his PhD in Kiel, Germany where he started building a Open Science EEG lab based in the deparment of Neurology. He has a daughter which you can meet at conferences or in one of his many Zoom calls. 
+
+![](pics/julius.png){ width="50%" class=center }
+
+## Yahya Shirazi
+Yahya is a postdoc at SCCN working hard to make the MOBI world a better place.
