@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.299">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>On the transferability and accessibility of human movement data</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./index.html" rel="" target="" aria-current="page">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./anatomical_table.html" rel="" target="">
+ <span class="menu-text">Landmark table</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./authors.html" rel="" target="">
+ <span class="menu-text">Authors</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#types-of-motion-capture" id="toc-types-of-motion-capture" class="nav-link" data-scroll-target="#types-of-motion-capture">Types of motion capture</a></li>
+  <li><a href="#definitions" id="toc-definitions" class="nav-link" data-scroll-target="#definitions">Definitions</a></li>
+  <li><a href="#anatomical-coordinate-system-for-each-rigid-body-part-julius" id="toc-anatomical-coordinate-system-for-each-rigid-body-part-julius" class="nav-link" data-scroll-target="#anatomical-coordinate-system-for-each-rigid-body-part-julius">Anatomical coordinate system for each rigid body part (Julius)</a></li>
+  <li><a href="#unified-placement-scheme" id="toc-unified-placement-scheme" class="nav-link" data-scroll-target="#unified-placement-scheme">Unified placement scheme</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">On the transferability and accessibility of human movement data</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Human motion capture is a suite of technologies and techniques to record a motion modality (i.e., position, speed, or acceleration) of the human moving parts and their environment, with extensive uses in movement science, rehabilitation, sports, and entertainment. However, the heterogeneity of the recorded modality and the spatial and temporal resolutions of the recordings make the utility and interpretability of the motion capture recordings challenging. [some examples of the importance and use of such helpful interpretability].</p>
+<p>Motion capture is a general term for acquiring a motion-related physical quantity (i.e., motion modality), such as position, speed, acceleration, etc. [talk about the fundamental differences between having each quantity.]</p>
+<p>Technologies related to motion capture mainly record one of the physical quantities, while the rest could, in theory, be driven by differentiation and integration coupled with some constraints. [talk about different techs, passive active marker-based, IMUs, ToF and dot projection, video cameras, and deep learning]</p>
+<p>Limitations of each method for motion capture manifest in the interpretability and transferability of the data from one modality to another. [brief discussions about the limitations]. A solution to address these limitations is an adequate and precise annotation of the features affecting the motion capture interpretation quality.</p>
+<p>Here we 1. briefly describe the main features of each modality. 2. We then discuss the annotations required for each modality that would adequately help with the interpretability of the motion capture data. 3. We finally introduce a set of best practices in defining coordinate systems and sensor placement schemes that would provide a framework for the interpretability of the motion capture data from one modality to another.</p>
+</section>
+<section id="types-of-motion-capture" class="level2">
+<h2 class="anchored" data-anchor-id="types-of-motion-capture">Types of motion capture</h2>
+<p>In the following chapter we will introduce three main types of motion capture systems, what type of data they record and the limits of transferability between them. We will also include how current specifications of sensor placements are done.</p>
+<p><strong>Optical Motion Capture (OMC)</strong>: Marker based optical motion capture systems utilize multiple cameras to track the movement of reflective markers placed on a subject’s body or objects. These markers reflect light emitted by the cameras, allowing the system to triangulate their positions in three-dimensional space. The cameras record the positions of these markers at high frame rates, typically capturing data on marker positions (POS) and, optionally, orientation (ORNT). Additionally, velocity (VEL), acceleration (ACCEL), and angular acceleration (ANGACCEL) data can be derived from the marker positions over time. The placement of markers should usually define marker type, size, and shape, along with their specific placement on anatomical landmarks or reference points, often including joints, limb segments, and other relevant locations.</p>
+<p><strong>Inertial Measurement Units (IMUs)</strong>: Inertial measurement units consist of small sensors, including accelerometers, gyroscopes, and sometimes magnetometers, attached to a subject’s body. IMUs measure changes in acceleration, angular velocity, and magnetic field strength, allowing them to record acceleration (ACCEL), angular acceleration (ANGACCEL), velocity (VEL), and orientation (ORNT). IMUs are compact and versatile, making them suitable for wearable applications, such as sports performance analysis and motion tracking in remote or outdoor environments. Positioning of the IMU on the human body should contain information about the location and orientation. The location often follows free form text and the orientation is described using photos or some kind of orientation in relation to the body part it is attached to.</p>
+<p><strong>Markerless Motion Capture</strong>: Markerless motion capture systems rely on algorithms to track a subject’s movements without the need for physical markers. These systems use cameras to capture video footage of the subject, and then some form of software processes the images to extract data on position (POS), orientation (ORNT), and sometimes velocity (VEL) and acceleration (ACCEL). Markerless motion capture is advantageous for its non-invasive nature and ability to capture natural movement, making it popular in the fields of entertainment, biomechanics, and human-computer interaction. The definition of the tracked points is often closely bound to the software and which points it allows to be tracked.</p>
+</section>
+<section id="definitions" class="level2">
+<h2 class="anchored" data-anchor-id="definitions">Definitions</h2>
+<p><strong>Space</strong> [in BIDS terms] BIDS defines “space” as an artificial frame of reference, created to describe different anatomies in a unifying manner (see Appendix VIII). However, data collected in studies of physical or virtual motion usually have a reference frame that is anchored to the physical lab space or the virtual environment.</p>
+<p><strong>Reference frame</strong> A reference frame, or a frame of reference is an abstract coordinate system whose origin, orientation, and scale are specified by a set of reference points (Kovalevsky &amp; Mueller, 1989). Here we interpret the concept of reference frame as a broad description of the type of the space, or the context that the data is associated with. It relates to whether the space itself is fixed or moving (global or local reference frame), or the identity of the object it moves with. For example, an anatomical reference frame is fixed to the body and moves when the body itself moves through space.</p>
+<p><strong>Coordinate system</strong> Examples : Cartesian coordinates, polar coordinates, and spherical coordinates. A coordinate system is fully described by (1) the origin, (2) the interpretation of the axes, and (3) the units.</p>
+<p>[in BIDS terms] A coordinate system in BIDS comprises of the information about (1) the origin relative to which the coordinate is expressed, (2) the interpretation of the three axes, and (3) the units in which the numbers are expressed</p>
+<p>Coordinate systems Motion data can be expressed within different coordinate systems associated with different frames of reference. The type of reference frame that requires the most detailed description is the anatomical, body-based reference frames.</p>
+<p>Reference frames can have a hierarchical structure where one reference frame is nested within another. For example, the position of the torso can be expressed in a coordinate system within the room reference frame, the arm position relative to the torso, and the hand position relative to the arm. In biomechanics …</p>
+<p>We refer to the reference frame that is at the top level of this hierarchy as the “global” reference frame. The global reference frame can be associated with the space through which the entire body moves, allowing the location of the person to be expressed as a position within that space. This representation is useful in scenarios where the location of the person in space is relevant rather than their posture or limb motion. For example, in spatial cognition research …</p>
+</section>
+<section id="anatomical-coordinate-system-for-each-rigid-body-part-julius" class="level2">
+<h2 class="anchored" data-anchor-id="anatomical-coordinate-system-for-each-rigid-body-part-julius">Anatomical coordinate system for each rigid body part (Julius)</h2>
+<p>Axis per body part are defined in the table, with position of fiducials and span from start (-50) to end (50). A dataset with both IMU and optical markers is used as an example.</p>
+</section>
+<section id="unified-placement-scheme" class="level2">
+<h2 class="anchored" data-anchor-id="unified-placement-scheme">Unified placement scheme</h2>
+<p>The most common types of motion data are acceleration, angular acceleration, joint angles, magnetic field strength, orientation and position. Each type has different requirements for sensor placement. We want to present a way of encoding the marker location and orientation so that it can be unified across different data sets. …</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
