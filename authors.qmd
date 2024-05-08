@@ -18,7 +18,7 @@ Sein is investigating human spatial cognition using mobile EEG at the [Berlin Mo
 ## Julius Welzel
 Julius has completed his masters in 2019 in Cognitive Neuropsychology in Oldenburg, Germany and is still pursuing his PhD in Kiel, Germany where he started building a Open Science EEG lab based in the deparment of Neurology. He has a daughter which you can meet at conferences or in one of his many Zoom calls. 
 
-![](pics/julius.png){ width="50%" class=center }
+![](pics/julius.jpg){ width="50%" class=center }
 
 ## Yahya Shirazi
 Yahya is a postdoc at SCCN working hard to make the MOBI world a better place.
