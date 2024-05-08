@@ -3,9 +3,9 @@ on:
     push:
       branches: main
   
-  name: Quarto Publish
+name: Quarto Publish
   
-  jobs:
+jobs:
     build-deploy:
       runs-on: ubuntu-latest
       permissions:
