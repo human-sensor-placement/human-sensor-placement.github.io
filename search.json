@@ -32,7 +32,7 @@
     "href": "index.html#anatomical-coordinate-system-for-each-rigid-body-part-julius",
     "title": "On the transferability and accessibility of human movement data",
     "section": "Anatomical coordinate system for each rigid body part (Julius)",
-    "text": "Anatomical coordinate system for each rigid body part (Julius)\nAxis per body part are defined in the anatomical landmark table. The table includes the name of the body part, the axis, and the direction of the axis. The axis and direction is defined using the anatomical landmarks, with the limits of the axis ranging from 0 o 100% of the distance between the landmarks."
+    "text": "Anatomical coordinate system for each rigid body part (Julius)\nAxis per body part are defined in the anatomical landmark table. The table includes the name of the body part, the axis, and the direction of the axis. The axis and direction is defined using the anatomical landmarks, with the limits of the axis ranging from 0 to 100% of the distance between the landmarks."
   },
   {
     "objectID": "index.html#unified-placement-scheme",
