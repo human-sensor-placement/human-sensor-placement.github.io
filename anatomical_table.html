@@ -123,12 +123,7 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="human-body-segmentation" class="level1">
 <h1>Human Body Segmentation</h1>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="pics/hanavan_model.png" class="img-fluid figure-img"></p>
-<figcaption>Modified Hanavan model, see <a href="https://doi.org/10.1016/0021-9290(80)90171-2">Hatze 1980</a></figcaption>
-</figure>
-</div>
+<p><img src="pics/hanavan_model.png" class="img-fluid" style="width:20.0%" alt="Modified Hanavan model, see Hatze 1980"><img src="pics/sample_sensor_locations.png" class="img-fluid" style="width:80.0%" alt="From Warmerdam et. al.&nbsp;2022"></p>
 <table class="table">
 <colgroup>
 <col style="width: 1%">
@@ -158,10 +153,10 @@ ul.task-list li input[type="checkbox"] {
 <td>Head</td>
 <td>The upper part of the human body, or the front or upper part of the body of an animal, typically separated from the rest of the body by a neck, and containing the brain, mouth, and sense organs.</td>
 <td>The structure superior to the neck, encasing the brain, eyes, ears, nose, and mouth. It is demarcated by the skull, which separates the head from the neck at the base of the skull.</td>
-<td>1. Nasion (100,0,0), <br> 2. Inion (0,0,0), <br> Helix-Tragus Junction (HJ) <br> 3. LHJ (0,0,0) <br> 4. RHJ (0,100,0) <br> 5. Vertex (0,0,100) <br> 6. Midpoint between of mastoid processes (0,0,0)</td>
+<td>1. Nasion, <br> 2. Inion, <br> Helix-Tragus Junction (HJ) <br> 3. LHJ <br> 4. RHJ <br> 5. Vertex <br> 6. Midpoint between of mastoid processes</td>
 <td>X: Left ear → right ear Y: Inion → Nasion Z: Right-hand ruleLeft Vertex-&gt;Neck (limits. C2 and Vertex)</td>
-<td>1.(-50,0,0) bp.(x,y,z) HED:</td>
-<td>1. (40,-50,-50) 2. (40,50,-50) 3. (-40,-50,-50) 4. (40,-50,-50)</td>
+<td>1. HED:</td>
+<td>1. 2. 3. 4.</td>
 </tr>
 <tr class="even">
 <td>?</td>
@@ -180,8 +175,8 @@ ul.task-list li input[type="checkbox"] {
 <td>The upper part of the torso, extending from the base of the neck to the diaphragm. It’s framed by the rib cage, which includes the ribs, sternum, and thoracic vertebrae. The thorax houses vital organs such as the heart and lungs.</td>
 <td>1. Acromion process Left → Right <br> 2. Vertebra Prominens (C7), <br>3. Xiphoid Process</td>
 <td>X: Left → Right acromion process Y: Vertebra Prominens → Xiphoid Process Z: Right-hand rule (limits, Xiphoid and C7)</td>
-<td>1. (50,-40,0) 2. (-50, 30, 0)</td>
-<td>1. (50,-40,0) 2. (0, -50, -50) 3. (0, -50, 50) 4. ? 5. ? 6. ? 7. ?</td>
+<td>1. 2.</td>
+<td>1. 2. 3. 4. 5. 6. 7.</td>
 </tr>
 <tr class="even">
 <td>3</td>
@@ -260,8 +255,8 @@ ul.task-list li input[type="checkbox"] {
 <td>The part of the lower limb extending from the hip to the knee, primarily composed of the femur. It starts at the hip joint (where the femur connects with the pelvic girdle) and ends at the knee joint.</td>
 <td>1. Greater Trochanter <br> 2. Femur Medial Epicondyle (FME) <br> 3. Femur Lateral Epicondyle (FLE)</td>
 <td>X: FME → FLE Y: Right-hand rule (limits,least prominent point of the popliteal fossa at the back of the knee joint (posteriorly) to the most prominent point of the patellar bone while standing (anteriorly)?) Z: perp of FME-FLE → Greater Trochanter</td>
-<td>1. (0, 50, 0)</td>
-<td>1. (0, 50, 0)</td>
+<td>1.</td>
+<td>1.</td>
 </tr>
 <tr class="even">
 <td>11</td>
@@ -270,8 +265,8 @@ ul.task-list li input[type="checkbox"] {
 <td>The part of the lower limb extending from the hip to the knee, primarily composed of the femur. It starts at the hip joint (where the femur connects with the pelvic girdle) and ends at the knee joint.</td>
 <td>1. Greater Trochanter <br> 2. Femur Medial Epicondyle (FME) <br>3. Femur Lateral Epicondyle (FLE)</td>
 <td>X: FLE → FME Y: Right-hand rule (limits, least prominent point of the popliteal fossa at the back of the knee joint (posteriorly) to the most prominent point of the patellar bone while standing (anteriorly)?) Z: perp of FME-FLE → Greater Trochanter</td>
-<td>1. (0, 50, 0)</td>
-<td>1. (0, 50, 0)</td>
+<td>1.</td>
+<td>1.</td>
 </tr>
 <tr class="odd">
 <td>12</td>
@@ -280,8 +275,8 @@ ul.task-list li input[type="checkbox"] {
 <td>Calf: The posterior segment of the lower leg, from the knee to the ankle. The calf muscles (gastrocnemius and soleus) overlay the tibia and fibula, starting below the knee joint and extending to the ankle. Shin: The anterior part of the lower leg, starting just below the knee joint and extending to the ankle. It primarily involves the tibia.</td>
 <td>1. Lateral Malleolus (LM) <br>2. Medial Malleolus (MM) <br>3. Tibial Tuberosity</td>
 <td>X: MM → LM Y: Right-hand rule (limits, least prominent point of the popliteal fossa at the back of the knee joint (posteriorly) to the most prominent point of the patellar bone while standing (anteriorly)?) Z: perp of MM-LM → Tibial Tuberosity</td>
-<td>1. (-40, -50, 0) 2. (40, 50, 0)</td>
-<td>1. (-40, -50, 0)</td>
+<td>1. 2.</td>
+<td>1.</td>
 </tr>
 <tr class="even">
 <td>13</td>
@@ -290,8 +285,8 @@ ul.task-list li input[type="checkbox"] {
 <td></td>
 <td>1. Lateral Malleolus (LM) <br>2. Medial Malleolus (MM) <br>3. Tibial Tuberosity</td>
 <td>X: LM → MM Y: Right-hand rule (limits,least prominent point of the popliteal fossa at the back of the knee joint (posteriorly) to the most prominent point of the patellar bone while standing (anteriorly)?) Z: perp of MM-LM → Tibial Tuberosity</td>
-<td>1. (-40, -50, 0) 2. (40, 50, 0)</td>
-<td>1. (-40, -50, 0)</td>
+<td>1. 2.</td>
+<td>1.</td>
 </tr>
 <tr class="odd">
 <td>14</td>
@@ -300,8 +295,8 @@ ul.task-list li input[type="checkbox"] {
 <td>The distal extremity of the lower leg, starting at the ankle joint (where the tibia, fibula, and talus meet) and extending to the tips of the toes. It includes the tarsus, metatarsus, and phalanges.</td>
 <td>1. Calcaneal Tuberosity (CT, Heel Bone) <br>2. First Metatarsal Head (FME, tip of the big toe) <br>3.Lateral Malleolus (LM) <br>4. Medial Malleolus (MM)<br></td>
 <td>X: MM → LM Y: CT → FME Z: Right-hand rule (limits, CT to MM-LM line)</td>
-<td>1. (0, 0, -50)</td>
-<td>1. (50, 0, 50) 2. (-50, 0, 0) 3. (-50, 0, 50)</td>
+<td>1.</td>
+<td>1. 2. 3.</td>
 </tr>
 <tr class="even">
 <td>15</td>
@@ -310,8 +305,8 @@ ul.task-list li input[type="checkbox"] {
 <td>The distal extremity of the lower leg, starting at the ankle joint (where the tibia, fibula, and talus meet) and extending to the tips of the toes. It includes the tarsus, metatarsus, and phalanges.</td>
 <td>1. Calcaneal Tuberosity (CT, Heel Bone) <br>2. First Metatarsal Head (FME, tip of the big toe)<br> 3.Lateral Malleolus (LM) <br>4. Medial Malleolus (MM)<br></td>
 <td>X: LM → MM Y: CT → FME Z: Right-hand rule (limits, CT to MM-LM line)</td>
-<td>1. (0, 0, -50)</td>
-<td>1. (50, 0, 50) 2. (-50, 0, 0) 3. (-50, 0, 50)</td>
+<td>1.</td>
+<td>1. 2. 3.</td>
 </tr>
 </tbody>
 </table>
