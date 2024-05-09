@@ -47,7 +47,8 @@ Reference frames can have a hierarchical structure where one reference frame is 
 We refer to the reference frame that is at the top level of this hierarchy as the "global" reference frame. The global reference frame can be associated with the space through which the entire body moves, allowing the location of the person to be expressed as a position within that space. This representation is useful in scenarios where the location of the person in space is relevant rather than their posture or limb motion. For example, in spatial cognition research … 
 
 ## Anatomical coordinate system for each rigid body part (Julius)
-Axis per body part are defined in the anatomical landmark [table](./anatomical_table.qmd). The table includes the name of the body part, the axis, and the direction of the axis. The axis and direction is defined using the anatomical landmarks, with the limits of the axis ranging from 0 o 100% of the distance between the landmarks.
+Axis per body part are defined in the anatomical landmark [table](./anatomical_table.qmd).
+The table includes the name of the body part, the axis, and the direction of the axis. The axis and direction is defined using the anatomical landmarks, with the limits of the axis ranging from 0 to 100% of the distance between the landmarks.
 
 ## Unified placement scheme
 The most common types of motion data are acceleration, angular acceleration, joint angles, magnetic field strength, orientation and position. Each type has different requirements for sensor placement. We want to present a way of encoding the marker location and orientation so that it can be unified across different data sets. …
