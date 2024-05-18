@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>On the transferability and accessibility of human movement data</title>
+<title>index</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -111,70 +111,107 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#types-of-motion-capture" id="toc-types-of-motion-capture" class="nav-link" data-scroll-target="#types-of-motion-capture">Types of motion capture</a></li>
-  <li><a href="#definitions" id="toc-definitions" class="nav-link" data-scroll-target="#definitions">Definitions</a></li>
-  <li><a href="#anatomical-coordinate-system-for-each-rigid-body-part-julius" id="toc-anatomical-coordinate-system-for-each-rigid-body-part-julius" class="nav-link" data-scroll-target="#anatomical-coordinate-system-for-each-rigid-body-part-julius">Anatomical coordinate system for each rigid body part (Julius)</a></li>
-  <li><a href="#unified-placement-scheme" id="toc-unified-placement-scheme" class="nav-link" data-scroll-target="#unified-placement-scheme">Unified placement scheme</a></li>
+  <li><a href="#on-the-transferability-and-accessibility-of-human-movement-data" id="toc-on-the-transferability-and-accessibility-of-human-movement-data" class="nav-link active" data-scroll-target="#on-the-transferability-and-accessibility-of-human-movement-data">On the Transferability and Accessibility of Human Movement Data</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#types-of-motion-capture" id="toc-types-of-motion-capture" class="nav-link" data-scroll-target="#types-of-motion-capture">Types of Motion Capture</a>
+  <ul class="collapse">
+  <li><a href="#optical-motion-capture-omc" id="toc-optical-motion-capture-omc" class="nav-link" data-scroll-target="#optical-motion-capture-omc">Optical Motion Capture (OMC)</a></li>
+  <li><a href="#inertial-measurement-units-imus" id="toc-inertial-measurement-units-imus" class="nav-link" data-scroll-target="#inertial-measurement-units-imus">Inertial Measurement Units (IMUs)</a></li>
+  <li><a href="#markerless-motion-capture" id="toc-markerless-motion-capture" class="nav-link" data-scroll-target="#markerless-motion-capture">Markerless Motion Capture</a></li>
+  </ul></li>
+  <li><a href="#definitions" id="toc-definitions" class="nav-link" data-scroll-target="#definitions">Definitions</a>
+  <ul class="collapse">
+  <li><a href="#space" id="toc-space" class="nav-link" data-scroll-target="#space">Space</a></li>
+  <li><a href="#reference-frame" id="toc-reference-frame" class="nav-link" data-scroll-target="#reference-frame">Reference Frame</a></li>
+  <li><a href="#coordinate-system" id="toc-coordinate-system" class="nav-link" data-scroll-target="#coordinate-system">Coordinate System</a></li>
+  <li><a href="#hierarchical-structure-of-reference-frames" id="toc-hierarchical-structure-of-reference-frames" class="nav-link" data-scroll-target="#hierarchical-structure-of-reference-frames">Hierarchical Structure of Reference Frames</a></li>
+  </ul></li>
+  <li><a href="#unified-placement-scheme" id="toc-unified-placement-scheme" class="nav-link" data-scroll-target="#unified-placement-scheme">Unified Placement Scheme</a>
+  <ul class="collapse">
+  <li><a href="#anatomical-coordinate-system-for-rigid-body-parts" id="toc-anatomical-coordinate-system-for-rigid-body-parts" class="nav-link" data-scroll-target="#anatomical-coordinate-system-for-rigid-body-parts">Anatomical Coordinate System for Rigid Body Parts</a></li>
+  <li><a href="#principles-of-sensor-placement-annoration" id="toc-principles-of-sensor-placement-annoration" class="nav-link" data-scroll-target="#principles-of-sensor-placement-annoration">Principles of Sensor Placement Annoration</a></li>
+  <li><a href="#placement-precision" id="toc-placement-precision" class="nav-link" data-scroll-target="#placement-precision">Placement Precision</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">On the transferability and accessibility of human movement data</h1>
-</div>
 
 
 
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>Human motion capture is a suite of technologies and techniques to record a motion modality (i.e., position, speed, or acceleration) of the human moving parts and their environment, with extensive uses in movement science, rehabilitation, sports, and entertainment. However, the heterogeneity of the recorded modality and the spatial and temporal resolutions of the recordings make the utility and interpretability of the motion capture recordings challenging. [some examples of the importance and use of such helpful interpretability].</p>
-<p>Motion capture is a general term for acquiring a motion-related physical quantity (i.e., motion modality), such as position, speed, acceleration, etc. [talk about the fundamental differences between having each quantity.]</p>
-<p>Technologies related to motion capture mainly record one of the physical quantities, while the rest could, in theory, be driven by differentiation and integration coupled with some constraints. [talk about different techs, passive active marker-based, IMUs, ToF and dot projection, video cameras, and deep learning]</p>
-<p>Limitations of each method for motion capture manifest in the interpretability and transferability of the data from one modality to another. [brief discussions about the limitations]. A solution to address these limitations is an adequate and precise annotation of the features affecting the motion capture interpretation quality.</p>
-<p>Here we 1. briefly describe the main features of each modality. 2. We then discuss the annotations required for each modality that would adequately help with the interpretability of the motion capture data. 3. We finally introduce a set of best practices in defining coordinate systems and sensor placement schemes that would provide a framework for the interpretability of the motion capture data from one modality to another.</p>
+<section id="on-the-transferability-and-accessibility-of-human-movement-data" class="level1">
+<h1>On the Transferability and Accessibility of Human Movement Data</h1>
 </section>
-<section id="types-of-motion-capture" class="level2">
-<h2 class="anchored" data-anchor-id="types-of-motion-capture">Types of motion capture</h2>
-<p>In the following chapter we will introduce three main types of motion capture systems, what type of data they record and the limits of transferability between them. We will also include how current specifications of sensor placements are done.</p>
-<p><strong>Optical Motion Capture (OMC)</strong>: Marker based optical motion capture systems utilize multiple cameras to track the movement of reflective markers placed on a subject’s body or objects. These markers reflect light emitted by the cameras, allowing the system to triangulate their positions in three-dimensional space. The cameras record the positions of these markers at high frame rates, typically capturing data on marker positions (POS) and, optionally, orientation (ORNT). Additionally, velocity (VEL), acceleration (ACCEL), and angular acceleration (ANGACCEL) data can be derived from the marker positions over time. The placement of markers should usually define marker type, size, and shape, along with their specific placement on anatomical landmarks or reference points, often including joints, limb segments, and other relevant locations.</p>
-<p><strong>Inertial Measurement Units (IMUs)</strong>: Inertial measurement units consist of small sensors, including accelerometers, gyroscopes, and sometimes magnetometers, attached to a subject’s body. IMUs measure changes in acceleration, angular velocity, and magnetic field strength, allowing them to record acceleration (ACCEL), angular acceleration (ANGACCEL), velocity (VEL), and orientation (ORNT). IMUs are compact and versatile, making them suitable for wearable applications, such as sports performance analysis and motion tracking in remote or outdoor environments. Positioning of the IMU on the human body should contain information about the location and orientation. The location often follows free form text and the orientation is described using photos or some kind of orientation in relation to the body part it is attached to.</p>
-<p><strong>Markerless Motion Capture</strong>: Markerless motion capture systems rely on algorithms to track a subject’s movements without the need for physical markers. These systems use cameras to capture video footage of the subject, and then some form of software processes the images to extract data on position (POS), orientation (ORNT), and sometimes velocity (VEL) and acceleration (ACCEL). Markerless motion capture is advantageous for its non-invasive nature and ability to capture natural movement, making it popular in the fields of entertainment, biomechanics, and human-computer interaction. The definition of the tracked points is often closely bound to the software and which points it allows to be tracked.</p>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>Human motion capture encompasses various technologies and techniques to record different modalities of human motion, such as position, speed, or acceleration. These techniques are extensively used in movement science, rehabilitation, sports, and entertainment. However, the heterogeneity of recorded modalities and the varying spatial and temporal resolutions of these recordings pose challenges for the utility and interpretability of motion capture data. This necessitates a clear, unified approach for sensor placement to ensure data transferability and accessibility across different systems.</p>
+<p>Motion capture generally involves acquiring motion-related physical quantities (motion modalities) such as position, speed, and acceleration. The fundamental differences between these quantities highlight the need for different technologies and methods, including passive and active marker-based systems, IMUs, ToF, dot projection, video cameras, and deep learning techniques.</p>
+<p>Each motion capture method has limitations, impacting the interpretability and transferability of data from one modality to another. To address these limitations, we propose a precise annotation of features affecting the quality of motion capture interpretation.</p>
+<p>In this manuscript, we will briefly describe the main features of each modality and introduce a set of definitions that we will use throughout. We finally propose a scheme for unified sensor placement annotation with quantifiable levels of precision. We try to align this scheme with the currently available standards for data sharing and annotation, namely the <strong>Brain Imaging Data Structure (BIDS)</strong> and the <strong>Hierarchical Event Descriptors (HED)</strong>.</p>
 </section>
-<section id="definitions" class="level2">
-<h2 class="anchored" data-anchor-id="definitions">Definitions</h2>
-<p><strong>Space</strong> [in BIDS terms] BIDS defines ``space’’ as an artificial frame of reference, created to describe different anatomies in a unifying manner (see Appendix VIII). However, data collected in studies of physical or virtual motion usually have a reference frame that is anchored to the physical lab space or the virtual environment.</p>
-<p><strong>Reference frame</strong> A reference frame, or a frame of reference is an abstract coordinate system whose origin, orientation, and scale are specified by a set of reference points (Kovalevsky &amp; Mueller, 1989). Here we interpret the concept of reference frame as a broad description of the type of the space, or the context that the data is associated with. It relates to whether the space itself is fixed or moving (global or local reference frame), or the identity of the object it moves with. For example, an anatomical reference frame is fixed to the body and moves when the body itself moves through space.</p>
-<p><strong>Coordinate system</strong> Examples : Cartesian coordinates, polar coordinates, and spherical coordinates. A coordinate system is fully described by (1) the origin, (2) the interpretation of the axes, and (3) the units.</p>
-<p>[in BIDS terms] A coordinate system in BIDS comprises of the information about (1) the origin relative to which the coordinate is expressed, (2) the interpretation of the three axes, and (3) the units in which the numbers are expressed</p>
-<p>Coordinate systems Motion data can be expressed within different coordinate systems associated with different frames of reference. The type of reference frame that requires the most detailed description is the anatomical, body-based reference frames.</p>
-<p>Reference frames can have a hierarchical structure where one reference frame is nested within another. For example, the position of the torso can be expressed in a coordinate system within the room reference frame, the arm position relative to the torso, and the hand position relative to the arm. In biomechanics …</p>
-<p>We refer to the reference frame that is at the top level of this hierarchy as the “global” reference frame. The global reference frame can be associated with the space through which the entire body moves, allowing the location of the person to be expressed as a position within that space. This representation is useful in scenarios where the location of the person in space is relevant rather than their posture or limb motion. For example, in spatial cognition research …</p>
+<section id="types-of-motion-capture" class="level1">
+<h1>Types of Motion Capture</h1>
+<section id="optical-motion-capture-omc" class="level2">
+<h2 class="anchored" data-anchor-id="optical-motion-capture-omc">Optical Motion Capture (OMC)</h2>
+<p><strong>Optical Motion Capture (OMC)</strong> systems utilize multiple cameras to track the movement of reflective markers placed on a subject’s body or objects. These markers reflect light emitted by the cameras, allowing the system to triangulate their positions in three-dimensional space. The cameras record the positions of these markers at high frame rates, capturing data on <strong>marker positions (POS)</strong> and, optionally, <strong>orientation (ORNT)</strong>. Additionally, <strong>velocity (VEL)</strong>, <strong>acceleration (ACCEL)</strong>, and <strong>angular acceleration (ANGACCEL)</strong> data can be derived from the marker positions over time. <strong>Marker placement</strong> should define the type, size, and shape of markers, along with their specific placement on anatomical landmarks, such as joints and limb segments.</p>
 </section>
-<section id="anatomical-coordinate-system-for-each-rigid-body-part-julius" class="level2">
-<h2 class="anchored" data-anchor-id="anatomical-coordinate-system-for-each-rigid-body-part-julius">Anatomical coordinate system for each rigid body part (Julius)</h2>
-<p>Axis per body part are defined in the anatomical landmark <a href="./anatomical_table.html">table</a>. The table includes the name of the body part, the axis, and the direction of the axis. The axis and direction is defined using the anatomical landmarks, with the limits of the axis ranging from 0 to 100% of the distance between the landmarks.</p>
+<section id="inertial-measurement-units-imus" class="level2">
+<h2 class="anchored" data-anchor-id="inertial-measurement-units-imus">Inertial Measurement Units (IMUs)</h2>
+<p><strong>Inertial Measurement Units (IMUs)</strong> consist of small sensors, including accelerometers, gyroscopes, and sometimes magnetometers, attached to a subject’s body. IMUs measure changes in <strong>acceleration (ACCEL)</strong>, <strong>angular acceleration (ANGACCEL)</strong>, <strong>velocity (VEL)</strong>, and <strong>orientation (ORNT)</strong>. They are compact and versatile, making them suitable for wearable applications like sports performance analysis and motion tracking in remote or outdoor environments. <strong>Positioning of the IMU</strong> on the body should include details about the location and orientation, typically described using text and photographs or diagrams showing the sensor’s orientation relative to the body part it is attached to.</p>
 </section>
-<section id="unified-placement-scheme" class="level2">
-<h2 class="anchored" data-anchor-id="unified-placement-scheme">Unified placement scheme</h2>
-<p>The most common types of motion data are acceleration, angular acceleration, joint angles, magnetic field strength, orientation and position. Each type has different requirements for sensor placement. We want to present a way of encoding the marker location and orientation so that it can be unified across different data sets. …</p>
+<section id="markerless-motion-capture" class="level2">
+<h2 class="anchored" data-anchor-id="markerless-motion-capture">Markerless Motion Capture</h2>
+<p><strong>Markerless Motion Capture</strong> systems use algorithms to track a subject’s movements without physical markers. Cameras capture video footage, which software processes to extract data on <strong>position (POS)</strong>, <strong>orientation (ORNT)</strong>, and sometimes <strong>velocity (VEL)</strong> and <strong>acceleration (ACCEL)</strong>. Markerless motion capture is non-invasive and captures natural movement, making it popular in entertainment, biomechanics, and human-computer interaction. The tracked points’ definition is often software-specific, depending on which points the software allows to be tracked.</p>
+</section>
+</section>
+<section id="definitions" class="level1">
+<h1>Definitions</h1>
+<section id="space" class="level2">
+<h2 class="anchored" data-anchor-id="space">Space</h2>
+<p>In BIDS terms, <strong>space</strong> is defined as an artificial frame of reference used to describe different anatomies in a unifying manner (see Appendix VIII). Data collected in studies of physical or virtual motion typically have a reference frame anchored to the physical lab space or the virtual environment.</p>
+</section>
+<section id="reference-frame" class="level2">
+<h2 class="anchored" data-anchor-id="reference-frame">Reference Frame</h2>
+<p>A <strong>reference frame</strong> is an abstract coordinate system with a specified origin, orientation, and scale, defined by a set of reference points (Kovalevsky &amp; Mueller, 1989). It broadly describes the type of space or context associated with the data, whether the space is fixed or moving (global or local reference frame), or the identity of the object it moves with. For instance, an anatomical reference frame is fixed to the body and moves as the body moves through space.</p>
+</section>
+<section id="coordinate-system" class="level2">
+<h2 class="anchored" data-anchor-id="coordinate-system">Coordinate System</h2>
+<p>A <strong>coordinate system</strong> is fully described by (1) the origin, (2) the interpretation of the axes, and (3) the units. In BIDS terms, a coordinate system comprises information about (1) the origin relative to which the coordinate is expressed, (2) the interpretation of the three axes, and (3) the units in which the numbers are expressed.</p>
+</section>
+<section id="hierarchical-structure-of-reference-frames" class="level2">
+<h2 class="anchored" data-anchor-id="hierarchical-structure-of-reference-frames">Hierarchical Structure of Reference Frames</h2>
+<p>Reference frames can have a hierarchical structure, where one reference frame is nested within another. For example, the position of the torso can be expressed within a room reference frame, the arm position relative to the torso, and the hand position relative to the arm. The reference frame at the top of this hierarchy is the <strong>global reference frame</strong>, associated with the space through which the entire body moves. This representation is useful in scenarios where the location of the person in space is relevant rather than their posture or limb motion.</p>
+</section>
+</section>
+<section id="unified-placement-scheme" class="level1">
+<h1>Unified Placement Scheme</h1>
+<section id="anatomical-coordinate-system-for-rigid-body-parts" class="level2">
+<h2 class="anchored" data-anchor-id="anatomical-coordinate-system-for-rigid-body-parts">Anatomical Coordinate System for Rigid Body Parts</h2>
+<p>Axis definitions per body part are provided in the anatomical <strong><a href="./anatomical_table.html">landmark table</a></strong>. The table includes the name of the body part, the axis, and the direction of the axis, defined using anatomical landmarks, with axis limits ranging from 0 to 100% of the distance between the landmarks.</p>
+</section>
+<section id="principles-of-sensor-placement-annoration" class="level2">
+<h2 class="anchored" data-anchor-id="principles-of-sensor-placement-annoration">Principles of Sensor Placement Annoration</h2>
+<p>We propose a <strong>unified placement scheme</strong> for sensors based on anatomical landmarks and the axes defined in the anatomical landmark table. The scheme follows these principles:</p>
+<pre><code>1.  Sensor placement should be reproducible by a human with defined precision.
+2.  Placement in each dimension should be related to the anatomical landmarks of the relevant body part.
+3.  Landmarks define the origin, direction, and limits of the axes.
+4.  Sensor locations should be reported as a ratio of the limits of each axis for each body part.
+5.  Placement precision depends on the precision of landmarks, axes, and the measurement method.</code></pre>
+</section>
+<section id="placement-precision" class="level2">
+<h2 class="anchored" data-anchor-id="placement-precision">Placement Precision</h2>
+<p>The precision of sensor placement is related to the precision of landmark definitions, axis orthogonality, and measurement methods. We propose the following precision levels:</p>
+<ol type="1">
+<li><strong>Visual Inspection</strong>: Placement defined by visual inspection of body parts and landmarks, limited by human eye resolution and alignment ability. Estimated precision: ~10% of the distance between landmarks.</li>
+<li><strong>Tape Measure</strong>: Placement defined by measuring distances between landmarks and placing the sensor at a specific ratio. Limited by tape measure resolution and alignment ability. Estimated precision: ~5% of the distance between landmarks.</li>
+<li><strong>3D Scanning</strong>: Placement defined by 3D scanning body parts and placing the sensor at a specific ratio. Limited by 3D scanner resolution and alignment ability. Estimated precision: ~1% of the distance between landmarks.</li>
+</ol>
+<p><strong>Sensor placement precision</strong> should always be reported in the dataset metadata.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
