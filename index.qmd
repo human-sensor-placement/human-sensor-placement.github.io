@@ -46,9 +46,32 @@ Reference frames can have a hierarchical structure where one reference frame is 
 
 We refer to the reference frame that is at the top level of this hierarchy as the "global" reference frame. The global reference frame can be associated with the space through which the entire body moves, allowing the location of the person to be expressed as a position within that space. This representation is useful in scenarios where the location of the person in space is relevant rather than their posture or limb motion. For example, in spatial cognition research … 
 
-## Anatomical coordinate system for each rigid body part (Julius)
-Axis per body part are defined in the anatomical landmark [table](./anatomical_table.qmd).
+## Anatomical coordinate system for each rigid body part
+Axis per body part are defined in the anatomical **[landmark table](./anatomical_table.qmd)**.
 The table includes the name of the body part, the axis, and the direction of the axis. The axis and direction is defined using the anatomical landmarks, with the limits of the axis ranging from 0 to 100% of the distance between the landmarks.
 
 ## Unified placement scheme
-The most common types of motion data are acceleration, angular acceleration, joint angles, magnetic field strength, orientation and position. Each type has different requirements for sensor placement. We want to present a way of encoding the marker location and orientation so that it can be unified across different data sets. …
+The most common types of motion data are acceleration, angular acceleration, joint angles, magnetic field strength, orientation and position. Each type has different requirements for sensor placement. We aim to present a transparent and reproducoble way of encoding the marker location (and orientation) so that it can be unified across different technologies and data sets.
+
+We propose a unified placement scheme for the sensors. The scheme is based on the anatomical landmarks and the axes defined in the anatomical landmark table. The scheme is based on the following principles:
+
+1. Sensor placement should be defined in a way that it can be reproduced by a human up to set precision.
+
+2. Sensor placement in each dimension should be defined in relation to the anatomical landmarks of the body part it relates to.
+
+3. Landmarks define the origin, direction and limits of the axes.
+
+4. Sensor locations should be reported as a ration of the limits of each axis for each body part.
+
+5. Precision of the sensor placement is a function of the precision of the landmarks, axes, and the method of measurement.
+
+## Placement precision
+The precision of the sensor placement is directly related to the precision of landmark defintion, axes orthoganilty, and measurement method. Based on the common methods of measurement, we propose the following precision levels for the sensor placement:
+
+1. **Visual inspection**: The sensor placement is defined by visual inspection of the body part and the landmarks. The precision is limited by the resolution of the human eye and the ability to align the sensor with the landmarks. The precision is estimated to be around 10% of the distance between the landmarks.
+
+2. **Tape measure**: The sensor placement is defined by measuring the distance between the landmarks and placing the sensor at a specific ratio of the distance. The precision is limited by the resolution of the tape measure and the ability to align the sensor with the landmarks. The precision is estimated to be around 5% of the distance between the landmarks.
+
+3. **3D scanning**: The sensor placement is defined by 3D scanning the body part and placing the sensor at a specific ratio of the distance. The precision is limited by the resolution of the 3D scanner and the ability to align the sensor with the landmarks. The precision is estimated to be around 1% of the distance between the landmarks.
+
+The seneor placement precision should be always reported in the metadata of the data set.
