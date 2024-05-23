@@ -91,11 +91,11 @@
     "text": "Anatomical Coordinate System for Rigid Body Parts\nAxis definitions per body part are provided in the anatomical landmark table. The table includes the name of the body part, the axis, and the direction of the axis, defined using anatomical landmarks, with axis limits ranging from 0 to 100% of the distance between the landmarks."
   },
   {
-    "objectID": "index.html#principles-of-sensor-placement-annoration",
-    "href": "index.html#principles-of-sensor-placement-annoration",
+    "objectID": "index.html#principles-of-sensor-placement-annotation",
+    "href": "index.html#principles-of-sensor-placement-annotation",
     "title": "On the Transferability and Accessibility of Human Movement Data",
-    "section": "Principles of Sensor Placement Annoration",
-    "text": "Principles of Sensor Placement Annoration\nWe propose a unified placement scheme for sensors based on anatomical landmarks and the axes defined in the anatomical landmark table. The scheme follows these principles:\n1.  Sensor placement should be reproducible by a human with defined precision.\n2.  Placement in each dimension should be related to the anatomical landmarks of the relevant body part.\n3.  Landmarks define the origin, direction, and limits of the axes.\n4.  Sensor locations should be reported as a ratio of the limits of each axis for each body part.\n5.  Placement precision depends on the precision of landmarks, axes, and the measurement method."
+    "section": "Principles of Sensor Placement Annotation",
+    "text": "Principles of Sensor Placement Annotation\nWe propose a unified placement scheme for sensors based on anatomical landmarks and the axes defined in the anatomical landmark table. The scheme follows these principles:\n1.  Sensor placement should be reproducible by a human with defined precision.\n2.  Placement in each dimension should be related to the anatomical landmarks of the relevant body part.\n3.  Landmarks define the origin, direction, and limits of the axes.\n4.  Sensor locations should be reported as a ratio of the limits of each axis for each body part.\n5.  Placement precision depends on the precision of landmarks, axes, and the measurement method."
   },
   {
     "objectID": "index.html#placement-precision",

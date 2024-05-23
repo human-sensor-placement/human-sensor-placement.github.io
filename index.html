@@ -129,7 +129,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#unified-placement-scheme" id="toc-unified-placement-scheme" class="nav-link" data-scroll-target="#unified-placement-scheme">Unified Placement Scheme</a>
   <ul class="collapse">
   <li><a href="#anatomical-coordinate-system-for-rigid-body-parts" id="toc-anatomical-coordinate-system-for-rigid-body-parts" class="nav-link" data-scroll-target="#anatomical-coordinate-system-for-rigid-body-parts">Anatomical Coordinate System for Rigid Body Parts</a></li>
-  <li><a href="#principles-of-sensor-placement-annoration" id="toc-principles-of-sensor-placement-annoration" class="nav-link" data-scroll-target="#principles-of-sensor-placement-annoration">Principles of Sensor Placement Annoration</a></li>
+  <li><a href="#principles-of-sensor-placement-annotation" id="toc-principles-of-sensor-placement-annotation" class="nav-link" data-scroll-target="#principles-of-sensor-placement-annotation">Principles of Sensor Placement Annotation</a></li>
   <li><a href="#placement-precision" id="toc-placement-precision" class="nav-link" data-scroll-target="#placement-precision">Placement Precision</a></li>
   </ul></li>
   </ul>
@@ -149,7 +149,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Human motion capture encompasses various technologies and techniques to record different modalities of human motion, such as position, speed, or acceleration. These techniques are extensively used in movement science, rehabilitation, sports, and entertainment. However, the heterogeneity of recorded modalities and the varying spatial and temporal resolutions of these recordings pose challenges for the utility and interpretability of motion capture data. This necessitates a clear, unified approach for sensor placement to ensure data transferability and accessibility across different systems.</p>
 <p>Motion capture generally involves acquiring motion-related physical quantities (motion modalities) such as position, speed, and acceleration. The fundamental differences between these quantities highlight the need for different technologies and methods, including passive and active marker-based systems, IMUs, ToF, dot projection, video cameras, and deep learning techniques.</p>
 <p>Each motion capture method has limitations, impacting the interpretability and transferability of data from one modality to another. To address these limitations, we propose a precise annotation of features affecting the quality of motion capture interpretation.</p>
-<p>In this manuscript, we will briefly describe the main features of each modality and introduce a set of definitions that we will use throughout. We finally propose a scheme for unified sensor placement annotation with quantifiable levels of precision. We try to align this scheme with the currently available standards for data sharing and annotation, namely the <strong>Brain Imaging Data Structure (BIDS)</strong> and the <strong>Hierarchical Event Descriptors (HED)</strong>.</p>
+<p>In this manuscript, we will briefly describe the main features of each modality and introduce a set of definitions that we will use throughout. We finally propose a scheme for unified sensor placement annotation with quantifiable levels of precision. We try to align this scheme with the currently available standards for data sharing and annotation, namely the <strong><a href="https://bids.neuroimaging.io/">Brain Imaging Data Structure (BIDS)</a></strong> and the <strong><a href="https://www.hedtags.org/">Hierarchical Event Descriptors (HED)</a></strong>. See <a href="https://bids-specification.readthedocs.io/en/stable/modality-specific-files/motion.html">Motion-BIDS</a> and definition of body parts in <a href="https://www.hedtags.org/display_hed.html">HED schema browser</a> for relevant details.</p>
 </section>
 <section id="types-of-motion-capture" class="level1">
 <h1>Types of Motion Capture</h1>
@@ -191,8 +191,8 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="anatomical-coordinate-system-for-rigid-body-parts">Anatomical Coordinate System for Rigid Body Parts</h2>
 <p>Axis definitions per body part are provided in the anatomical <strong><a href="./anatomical_table.html">landmark table</a></strong>. The table includes the name of the body part, the axis, and the direction of the axis, defined using anatomical landmarks, with axis limits ranging from 0 to 100% of the distance between the landmarks.</p>
 </section>
-<section id="principles-of-sensor-placement-annoration" class="level2">
-<h2 class="anchored" data-anchor-id="principles-of-sensor-placement-annoration">Principles of Sensor Placement Annoration</h2>
+<section id="principles-of-sensor-placement-annotation" class="level2">
+<h2 class="anchored" data-anchor-id="principles-of-sensor-placement-annotation">Principles of Sensor Placement Annotation</h2>
 <p>We propose a <strong>unified placement scheme</strong> for sensors based on anatomical landmarks and the axes defined in the anatomical landmark table. The scheme follows these principles:</p>
 <pre><code>1.  Sensor placement should be reproducible by a human with defined precision.
 2.  Placement in each dimension should be related to the anatomical landmarks of the relevant body part.
