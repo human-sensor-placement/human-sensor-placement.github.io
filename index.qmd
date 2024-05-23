@@ -8,7 +8,7 @@ Motion capture generally involves acquiring motion-related physical quantities (
 
 Each motion capture method has limitations, impacting the interpretability and transferability of data from one modality to another. To address these limitations, we propose a precise annotation of features affecting the quality of motion capture interpretation.
 
-In this manuscript, we will briefly describe the main features of each modality and introduce a set of definitions that we will use throughout. We finally propose a scheme for unified sensor placement annotation with quantifiable levels of precision. We try to align this scheme with the currently available standards for data sharing and annotation, namely the **Brain Imaging Data Structure (BIDS)** and the **Hierarchical Event Descriptors (HED)**.
+In this manuscript, we will briefly describe the main features of each modality and introduce a set of definitions that we will use throughout. We finally propose a scheme for unified sensor placement annotation with quantifiable levels of precision. We try to align this scheme with the currently available standards for data sharing and annotation, namely the **[Brain Imaging Data Structure (BIDS)](https://bids.neuroimaging.io/)** and the **[Hierarchical Event Descriptors (HED)](https://www.hedtags.org/)**. See [Motion-BIDS](https://bids-specification.readthedocs.io/en/stable/modality-specific-files/motion.html) and definition of body parts in [HED schema browser](https://www.hedtags.org/display_hed.html) for relevant details. 
 
 # Types of Motion Capture
 ## Optical Motion Capture (OMC)
@@ -42,7 +42,7 @@ Reference frames can have a hierarchical structure, where one reference frame is
 ## Anatomical Coordinate System for Rigid Body Parts
 Axis definitions per body part are provided in the anatomical **[landmark table](./anatomical_table.qmd)**. The table includes the name of the body part, the axis, and the direction of the axis, defined using anatomical landmarks, with axis limits ranging from 0 to 100% of the distance between the landmarks.
 
-## Principles of Sensor Placement Annoration
+## Principles of Sensor Placement Annotation
 We propose a **unified placement scheme** for sensors based on anatomical landmarks and the axes defined in the anatomical landmark table. The scheme follows these principles:
 
     1.	Sensor placement should be reproducible by a human with defined precision.
