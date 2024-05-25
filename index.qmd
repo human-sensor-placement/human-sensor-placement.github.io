@@ -59,3 +59,26 @@ The precision of sensor placement is related to the precision of landmark defini
 3. **3D Scanning**: Placement defined by 3D scanning body parts and placing the sensor at a specific ratio. Limited by 3D scanner resolution and alignment ability. Estimated precision: ~1% of the distance between landmarks.
 
 **Sensor placement precision** should always be reported in the dataset metadata.
+
+## Sensor Placement Annotation
+Sensor placement should be annotated using a standardized format, including:
+
+    1.	Body part name
+    2.	Axis name
+    3.	Axis direction
+    4.	Axis limits
+    5.	Sensor location as a ratio of the axis limits
+    6.	Sensor placement precision
+
+### Hierchical Event Descriptors (HED) for Sensor Placement
+We *propose* using Hierarchical Event Descriptors (HED) to annotate sensor placement in a standardized format. A possible HED tag for sensor placement could be:
+
+    (Body-part, (X-position/#, Y-position/#, Z-position/#), Precision)
+
+Where:
+    
+- Body-part: The name of the body part where the sensor is placed.
+- X-position, Y-position, Z-position: The sensor's position along the X, Y, and Z axes, respectively, expressed as a ratio of the axis limits.
+- Precision: The precision level of sensor placement (e.g., Visual Inspection, Tape Measure, 3D Scanning).
+
+NOTE: This proopsal is still in discussion and we are open to feedback and suggestions. Importantly, we aim to establish a **HED partnered schemaw** to define (1) the anatomical landmarks, (2) axis limits, and (3) axis direction for each body part.
