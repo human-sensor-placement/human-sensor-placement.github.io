@@ -131,6 +131,10 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#anatomical-coordinate-system-for-rigid-body-parts" id="toc-anatomical-coordinate-system-for-rigid-body-parts" class="nav-link" data-scroll-target="#anatomical-coordinate-system-for-rigid-body-parts">Anatomical Coordinate System for Rigid Body Parts</a></li>
   <li><a href="#principles-of-sensor-placement-annotation" id="toc-principles-of-sensor-placement-annotation" class="nav-link" data-scroll-target="#principles-of-sensor-placement-annotation">Principles of Sensor Placement Annotation</a></li>
   <li><a href="#placement-precision" id="toc-placement-precision" class="nav-link" data-scroll-target="#placement-precision">Placement Precision</a></li>
+  <li><a href="#sensor-placement-annotation" id="toc-sensor-placement-annotation" class="nav-link" data-scroll-target="#sensor-placement-annotation">Sensor Placement Annotation</a>
+  <ul class="collapse">
+  <li><a href="#hierchical-event-descriptors-hed-for-sensor-placement" id="toc-hierchical-event-descriptors-hed-for-sensor-placement" class="nav-link" data-scroll-target="#hierchical-event-descriptors-hed-for-sensor-placement">Hierchical Event Descriptors (HED) for Sensor Placement</a></li>
+  </ul></li>
   </ul></li>
   </ul>
 </nav>
@@ -209,8 +213,30 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>3D Scanning</strong>: Placement defined by 3D scanning body parts and placing the sensor at a specific ratio. Limited by 3D scanner resolution and alignment ability. Estimated precision: ~1% of the distance between landmarks.</li>
 </ol>
 <p><strong>Sensor placement precision</strong> should always be reported in the dataset metadata.</p>
+</section>
+<section id="sensor-placement-annotation" class="level2">
+<h2 class="anchored" data-anchor-id="sensor-placement-annotation">Sensor Placement Annotation</h2>
+<p>Sensor placement should be annotated using a standardized format, including:</p>
+<pre><code>1.  Body part name
+2.  Axis name
+3.  Axis direction
+4.  Axis limits
+5.  Sensor location as a ratio of the axis limits
+6.  Sensor placement precision</code></pre>
+<section id="hierchical-event-descriptors-hed-for-sensor-placement" class="level3">
+<h3 class="anchored" data-anchor-id="hierchical-event-descriptors-hed-for-sensor-placement">Hierchical Event Descriptors (HED) for Sensor Placement</h3>
+<p>We <em>propose</em> using Hierarchical Event Descriptors (HED) to annotate sensor placement in a standardized format. A possible HED tag for sensor placement could be:</p>
+<pre><code>(Body-part, (X-position/#, Y-position/#, Z-position/#), Precision)</code></pre>
+<p>Where:</p>
+<ul>
+<li>Body-part: The name of the body part where the sensor is placed.</li>
+<li>X-position, Y-position, Z-position: The sensor’s position along the X, Y, and Z axes, respectively, expressed as a ratio of the axis limits.</li>
+<li>Precision: The precision level of sensor placement (e.g., Visual Inspection, Tape Measure, 3D Scanning).</li>
+</ul>
+<p>NOTE: This proopsal is still in discussion and we are open to feedback and suggestions. Importantly, we aim to establish a <strong>HED partnered schemaw</strong> to define (1) the anatomical landmarks, (2) axis limits, and (3) axis direction for each body part.</p>
 
 
+</section>
 </section>
 </section>
 
