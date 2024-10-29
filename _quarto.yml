@@ -16,6 +16,9 @@ format:
     theme: cosmo
     css: styles.css
     toc: true
+    grid: 
+      body-width: 1500px
+      sidebar-width: 50px
 
 
 
