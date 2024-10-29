@@ -125,39 +125,41 @@ ul.task-list li input[type="checkbox"] {
 <h1>Human Body Segmentation</h1>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="pics/hanavan_model.png" class="img-fluid figure-img" style="width:15.0%"></p>
+<p><img src="pics/ilustrations/Whole_body.jpeg" class="img-fluid figure-img" style="width:15.0%"></p>
 <figcaption>Modified Hanavan model, see <a href="https://doi.org/10.1016/0021-9290(80)90171-2">Hatze 1980</a></figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="pics/sample_sensor_withnums.jpg" class="img-fluid figure-img" style="width:100.0%"></p>
+<p><img src="pics/sample_sensor_withnums.jpg" class="img-fluid figure-img" style="width:70.0%"></p>
 <figcaption>From <a href="https://doi.org/10.3390/data7100136">Warmerdam et. al.&nbsp;2022</a></figcaption>
 </figure>
 </div>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 2%">
-<col style="width: 2%">
-<col style="width: 21%">
-<col style="width: 24%">
-<col style="width: 15%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 10%">
 <col style="width: 17%">
-<col style="width: 1%">
-<col style="width: 11%">
-<col style="width: 2%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 7%">
+<col style="width: 4%">
+<col style="width: 17%">
+<col style="width: 17%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>Hanavan Body Part</th>
+<th>Body Part</th>
 <th>HED Label</th>
 <th>HED Description</th>
 <th>Anatomical Description</th>
-<th>Fiducials (Landmark Locations)</th>
+<th>Fiducials</th>
 <th>Coordinate System</th>
 <th>Example IMU</th>
 <th>Example Mocap</th>
 <th>Landmark visualization</th>
+<th style="text-align: right;"></th>
 </tr>
 </thead>
 <tbody>
@@ -171,6 +173,7 @@ ul.task-list li input[type="checkbox"] {
 <td>1. (50, 0, 50)</td>
 <td>1. (100, 100, 80)<br>2. (0, 100, 80)<br>3. (100, 10, 80)<br>4. (0, 10, 80)</td>
 <td><img src="pics/ilustrations/1_head.jpeg" class="img-fluid" alt="Head"></td>
+<td style="text-align: right;"></td>
 </tr>
 <tr class="even">
 <td>?</td>
@@ -182,6 +185,7 @@ ul.task-list li input[type="checkbox"] {
 <td>n/a</td>
 <td>n/a</td>
 <td><img src="pics/ilustrations/neck.jpeg" class="img-fluid" alt="Neck"></td>
+<td style="text-align: right;"></td>
 </tr>
 <tr class="odd">
 <td>2</td>
@@ -193,6 +197,7 @@ ul.task-list li input[type="checkbox"] {
 <td>2. (50, 100, 70)</td>
 <td>5. (50, 100, 70)<br>A.(100, 100, 30) <br>B.(0, 100, 30)</td>
 <td><img src="pics/ilustrations/2_torso-chest.jpeg" class="img-fluid" alt="Torso"></td>
+<td style="text-align: right;"></td>
 </tr>
 <tr class="even">
 <td>3</td>
@@ -204,6 +209,7 @@ ul.task-list li input[type="checkbox"] {
 <td>n/a</td>
 <td>n/a</td>
 <td><img src="pics/ilustrations/3_abdomen.jpeg" class="img-fluid" alt="Abdomen"></td>
+<td style="text-align: right;"></td>
 </tr>
 <tr class="odd">
 <td>4</td>
@@ -215,6 +221,7 @@ ul.task-list li input[type="checkbox"] {
 <td>n/a</td>
 <td>10. (100, 50, 50)</td>
 <td><img src="pics/ilustrations/4_right_hand.jpeg" class="img-fluid" alt="Right Hand"></td>
+<td style="text-align: right;"></td>
 </tr>
 <tr class="even">
 <td>5</td>
@@ -226,6 +233,7 @@ ul.task-list li input[type="checkbox"] {
 <td>n/a</td>
 <td>11. (0, 50, 50)</td>
 <td><img src="pics/ilustrations/5_left_hand.jpeg" class="img-fluid" alt="Left Hand"></td>
+<td style="text-align: right;"></td>
 </tr>
 <tr class="odd">
 <td>6</td>
@@ -237,6 +245,7 @@ ul.task-list li input[type="checkbox"] {
 <td>3. (100, 50, 70)</td>
 <td>6. (100, 50, 70) <br> C. (100, 50, 0)</td>
 <td><img src="pics/ilustrations/6_right_upper_arm.jpeg" class="img-fluid" alt="Right Upper-arm"></td>
+<td style="text-align: right;"></td>
 </tr>
 <tr class="even">
 <td>7</td>
@@ -248,6 +257,7 @@ ul.task-list li input[type="checkbox"] {
 <td>4. (0, 50, 70)</td>
 <td>7. (0, 50, 50) <br> D. (0, 50, 0)</td>
 <td><img src="pics/ilustrations/7_left_upper_arm.jpeg" class="img-fluid" alt="Left Upper-arm"></td>
+<td style="text-align: right;"></td>
 </tr>
 <tr class="odd">
 <td>8</td>
@@ -259,6 +269,7 @@ ul.task-list li input[type="checkbox"] {
 <td>5. (100, 50, 30)</td>
 <td>8. (100, 50, 70) <br> E. (50, 100, 0)</td>
 <td><img src="pics/ilustrations/8_right_forearm.jpeg" class="img-fluid" alt="Right Forearm"></td>
+<td style="text-align: right;"></td>
 </tr>
 <tr class="even">
 <td>9</td>
@@ -270,6 +281,7 @@ ul.task-list li input[type="checkbox"] {
 <td>6. (0, 50, 30)</td>
 <td>9. (0, 50, 50) <br> E. (50, 100, 0)</td>
 <td><img src="pics/ilustrations/9_left_forearm.jpeg" class="img-fluid" alt="Left Forearm"></td>
+<td style="text-align: right;"></td>
 </tr>
 <tr class="odd">
 <td>10</td>
@@ -281,6 +293,7 @@ ul.task-list li input[type="checkbox"] {
 <td>7. (100, 50, 50)</td>
 <td>12. (100, 50, 50)</td>
 <td><img src="pics/ilustrations/10_right_thigh.jpeg" class="img-fluid" alt="Right Thigh"></td>
+<td style="text-align: right;"></td>
 </tr>
 <tr class="even">
 <td>11</td>
@@ -292,6 +305,7 @@ ul.task-list li input[type="checkbox"] {
 <td>8. (0, 50, 50)</td>
 <td>13. (0, 50, 50)</td>
 <td><img src="pics/ilustrations/11_left_thigh.jpeg" class="img-fluid" alt="Left Thigh"></td>
+<td style="text-align: right;"></td>
 </tr>
 <tr class="odd">
 <td>12</td>
@@ -303,6 +317,7 @@ ul.task-list li input[type="checkbox"] {
 <td>9. (0, 50, 80) <br> 11. (100, 50, 20)</td>
 <td>14. (100, 50, 80)<br> G. (100, 50, 0)</td>
 <td><img src="pics/ilustrations/12_right_lower_leg.jpeg" class="img-fluid" alt="Right Lower-leg"></td>
+<td style="text-align: right;"></td>
 </tr>
 <tr class="even">
 <td>13</td>
@@ -314,6 +329,7 @@ ul.task-list li input[type="checkbox"] {
 <td>10. (100, 50, 80) <br> 12. (0, 50, 20)</td>
 <td>15. (0, 50, 80)<br> G. (0, 50, 0)</td>
 <td><img src="pics/ilustrations/13_left_lower_leg.jpeg" class="img-fluid" alt="Left Lower-leg"></td>
+<td style="text-align: right;"></td>
 </tr>
 <tr class="odd">
 <td>14</td>
@@ -325,6 +341,7 @@ ul.task-list li input[type="checkbox"] {
 <td>13. (50, 60, 80)</td>
 <td>16. (50, 100, 40)<br>18. (50, 0, 50)</td>
 <td><img src="pics/ilustrations/14_right_foot.jpeg" class="img-fluid" alt="Right Foot"></td>
+<td style="text-align: right;"></td>
 </tr>
 <tr class="even">
 <td>15</td>
@@ -335,7 +352,8 @@ ul.task-list li input[type="checkbox"] {
 <td>X: LM → MM<br>Y: CT → FME<br>Z: Right-hand rule (limits: CT to MM-LM line)</td>
 <td>14. (50, 60, 80)</td>
 <td>17. (50, 100, 40)<br>19. (50, 0, 50)</td>
-<td><img src="pics/ilustrations/15_left_foot.jpeg" class="img-fluid" alt="Left Foot"></td>
+<td><img src="pics/ilustrations/15_left_foot.jpeg" class="img-fluid" width="300" alt="Left Foot"></td>
+<td style="text-align: right;"></td>
 </tr>
 </tbody>
 </table>
