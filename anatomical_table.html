@@ -140,11 +140,12 @@ ul.task-list li input[type="checkbox"] {
 <col style="width: 2%">
 <col style="width: 2%">
 <col style="width: 21%">
-<col style="width: 25%">
-<col style="width: 16%">
+<col style="width: 24%">
+<col style="width: 15%">
 <col style="width: 17%">
 <col style="width: 1%">
-<col style="width: 12%">
+<col style="width: 11%">
+<col style="width: 2%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -156,6 +157,7 @@ ul.task-list li input[type="checkbox"] {
 <th>Coordinate System</th>
 <th>Example IMU</th>
 <th>Example Mocap</th>
+<th>Landmark visualization</th>
 </tr>
 </thead>
 <tbody>
@@ -168,6 +170,7 @@ ul.task-list li input[type="checkbox"] {
 <td>X: Left ear → right ear<br>Y: Inion → Nasion<br>Z: Right-hand rule (limits: MMP and Vertex)</td>
 <td>1. (50, 0, 50)</td>
 <td>1. (100, 100, 80)<br>2. (0, 100, 80)<br>3. (100, 10, 80)<br>4. (0, 10, 80)</td>
+<td><img src="pics/ilustrations/1_head.jpeg" class="img-fluid" alt="Head"></td>
 </tr>
 <tr class="even">
 <td>?</td>
@@ -178,6 +181,7 @@ ul.task-list li input[type="checkbox"] {
 <td>X: right-hand rule (limits?)<br>Y: C7 → Suprasternal notch<br>Z: Suprasternal notch → Mastoid midpoint</td>
 <td>n/a</td>
 <td>n/a</td>
+<td><img src="pics/ilustrations/neck.jpeg" class="img-fluid" alt="Neck"></td>
 </tr>
 <tr class="odd">
 <td>2</td>
@@ -188,6 +192,7 @@ ul.task-list li input[type="checkbox"] {
 <td>X: Left → Right acromion process<br>Y: Vertebra Prominens → Xiphoid Process<br>Z: Right-hand rule (limits: Xiphoid and C7)</td>
 <td>2. (50, 100, 70)</td>
 <td>5. (50, 100, 70)<br>A.(100, 100, 30) <br>B.(0, 100, 30)</td>
+<td><img src="pics/ilustrations/2_torso-chest.jpeg" class="img-fluid" alt="Torso"></td>
 </tr>
 <tr class="even">
 <td>3</td>
@@ -198,6 +203,7 @@ ul.task-list li input[type="checkbox"] {
 <td>X: Left → Right ASIS<br>Y: Right-hand rule (limits: ASIS and PSIS)<br>Z: Umbilicus → Xiphoid Process</td>
 <td>n/a</td>
 <td>n/a</td>
+<td><img src="pics/ilustrations/3_abdomen.jpeg" class="img-fluid" alt="Abdomen"></td>
 </tr>
 <tr class="odd">
 <td>4</td>
@@ -208,6 +214,7 @@ ul.task-list li input[type="checkbox"] {
 <td>X: RSP → USP<br>Y: Right hand rule (limits: ?)<br>Z: MCP → Midline RSP-USP</td>
 <td>n/a</td>
 <td>10. (100, 50, 50)</td>
+<td><img src="pics/ilustrations/4_right_hand.jpeg" class="img-fluid" alt="Right Hand"></td>
 </tr>
 <tr class="even">
 <td>5</td>
@@ -218,6 +225,7 @@ ul.task-list li input[type="checkbox"] {
 <td>X: USP → RSP<br>Y: Right hand rule (limits: wrist depth, from dorsal to palmar surface at the midpoint RSP-USP?)<br>Z: MCP → Midline RSP-USP</td>
 <td>n/a</td>
 <td>11. (0, 50, 50)</td>
+<td><img src="pics/ilustrations/5_left_hand.jpeg" class="img-fluid" alt="Left Hand"></td>
 </tr>
 <tr class="odd">
 <td>6</td>
@@ -228,6 +236,7 @@ ul.task-list li input[type="checkbox"] {
 <td>X: MHE → LHE<br>Y: Right-hand rule (limits: most prominent point of the olecranon process at the back of the elbow (posteriorly) to the least prominent point of the cubital fossa (anteriorly))<br>Z: Perpendicular line from MHE-LHE → Acromion</td>
 <td>3. (100, 50, 70)</td>
 <td>6. (100, 50, 70) <br> C. (100, 50, 0)</td>
+<td><img src="pics/ilustrations/6_right_upper_arm.jpeg" class="img-fluid" alt="Right Upper-arm"></td>
 </tr>
 <tr class="even">
 <td>7</td>
@@ -238,6 +247,7 @@ ul.task-list li input[type="checkbox"] {
 <td>X: MHE → LHE<br>Y: Right-hand rule (limits: most prominent point of the olecranon process at the back of the elbow (posteriorly) to the least prominent point of the cubital fossa (anteriorly))<br>Z: Perpendicular line from MHE-LHE → Acromion</td>
 <td>4. (0, 50, 70)</td>
 <td>7. (0, 50, 50) <br> D. (0, 50, 0)</td>
+<td><img src="pics/ilustrations/7_left_upper_arm.jpeg" class="img-fluid" alt="Left Upper-arm"></td>
 </tr>
 <tr class="odd">
 <td>8</td>
@@ -248,6 +258,7 @@ ul.task-list li input[type="checkbox"] {
 <td>X: RSP → USP<br>Y: Right-hand rule (limits: most prominent point of the olecranon process at the back of the elbow (posteriorly) to the least prominent point of the cubital fossa (anteriorly))<br>Z: perp of RSP-USP → LHE</td>
 <td>5. (100, 50, 30)</td>
 <td>8. (100, 50, 70) <br> E. (50, 100, 0)</td>
+<td><img src="pics/ilustrations/8_right_forearm.jpeg" class="img-fluid" alt="Right Forearm"></td>
 </tr>
 <tr class="even">
 <td>9</td>
@@ -258,6 +269,7 @@ ul.task-list li input[type="checkbox"] {
 <td>X: USP → RSP<br>Y: Right-hand rule (limits: most prominent point of the olecranon process at the back of the elbow (posteriorly) to the least prominent point of the cubital fossa (anteriorly))<br>Z: perp of RSP-USP → LHE</td>
 <td>6. (0, 50, 30)</td>
 <td>9. (0, 50, 50) <br> E. (50, 100, 0)</td>
+<td><img src="pics/ilustrations/9_left_forearm.jpeg" class="img-fluid" alt="Left Forearm"></td>
 </tr>
 <tr class="odd">
 <td>10</td>
@@ -268,6 +280,7 @@ ul.task-list li input[type="checkbox"] {
 <td>X: FME → FLE<br>Y: Right-hand rule (limits: least prominent point of the popliteal fossa at the back of the knee joint (posteriorly) to the most prominent point of the patellar bone while standing (anteriorly))<br>Z: perp of FME-FLE → Greater Trochanter</td>
 <td>7. (100, 50, 50)</td>
 <td>12. (100, 50, 50)</td>
+<td><img src="pics/ilustrations/10_right_thigh.jpeg" class="img-fluid" alt="Right Thigh"></td>
 </tr>
 <tr class="even">
 <td>11</td>
@@ -278,6 +291,7 @@ ul.task-list li input[type="checkbox"] {
 <td>X: FLE → FME<br>Y: Right-hand rule (limits: least prominent point of the popliteal fossa at the back of the knee joint (posteriorly) to the most prominent point of the patellar bone while standing (anteriorly))<br>Z: perp of FME-FLE → Greater Trochanter</td>
 <td>8. (0, 50, 50)</td>
 <td>13. (0, 50, 50)</td>
+<td><img src="pics/ilustrations/11_left_thigh.jpeg" class="img-fluid" alt="Left Thigh"></td>
 </tr>
 <tr class="odd">
 <td>12</td>
@@ -288,6 +302,7 @@ ul.task-list li input[type="checkbox"] {
 <td>X: MM → LM<br>Y: Right-hand rule (limits: least prominent point of the popliteal fossa at the back of the knee joint (posteriorly) to the most prominent point of the patellar bone while standing (anteriorly))<br>Z: perp of MM-LM → Tibial Tuberosity</td>
 <td>9. (0, 50, 80) <br> 11. (100, 50, 20)</td>
 <td>14. (100, 50, 80)<br> G. (100, 50, 0)</td>
+<td><img src="pics/ilustrations/12_right_lower_leg.jpeg" class="img-fluid" alt="Right Lower-leg"></td>
 </tr>
 <tr class="even">
 <td>13</td>
@@ -298,6 +313,7 @@ ul.task-list li input[type="checkbox"] {
 <td>X: LM → MM<br>Y: Right-hand rule (limits: least prominent point of the popliteal fossa at the back of the knee joint (posteriorly) to the most prominent point of the patellar bone while standing (anteriorly))<br>Z: perp of MM-LM → Tibial Tuberosity</td>
 <td>10. (100, 50, 80) <br> 12. (0, 50, 20)</td>
 <td>15. (0, 50, 80)<br> G. (0, 50, 0)</td>
+<td><img src="pics/ilustrations/13_left_lower_leg.jpeg" class="img-fluid" alt="Left Lower-leg"></td>
 </tr>
 <tr class="odd">
 <td>14</td>
@@ -308,6 +324,7 @@ ul.task-list li input[type="checkbox"] {
 <td>X: MM → LM<br>Y: CT → FME<br>Z: Right-hand rule (limits: CT to MM-LM line)</td>
 <td>13. (50, 60, 80)</td>
 <td>16. (50, 100, 40)<br>18. (50, 0, 50)</td>
+<td><img src="pics/ilustrations/14_right_foot.jpeg" class="img-fluid" alt="Right Foot"></td>
 </tr>
 <tr class="even">
 <td>15</td>
@@ -318,6 +335,7 @@ ul.task-list li input[type="checkbox"] {
 <td>X: LM → MM<br>Y: CT → FME<br>Z: Right-hand rule (limits: CT to MM-LM line)</td>
 <td>14. (50, 60, 80)</td>
 <td>17. (50, 100, 40)<br>19. (50, 0, 50)</td>
+<td><img src="pics/ilustrations/15_left_foot.jpeg" class="img-fluid" alt="Left Foot"></td>
 </tr>
 </tbody>
 </table>
