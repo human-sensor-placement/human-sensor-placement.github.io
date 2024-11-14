@@ -1,1 +1,1 @@
-Sitemap: https://JuliusWelzel.github.io/unified_sensor_placement_site/sitemap.xml
+Sitemap: https://human-sensor-placement.github.io/sitemap.xml
