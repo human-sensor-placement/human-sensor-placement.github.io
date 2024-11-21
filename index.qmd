@@ -10,13 +10,6 @@ Each motion capture method has limitations, impacting the interpretability and t
 
 In this manuscript, we will briefly describe the main features of each modality and introduce a set of definitions that we will use throughout. We finally propose a scheme for unified sensor placement annotation with quantifiable levels of precision. We try to align this scheme with the currently available standards for data sharing and annotation, namely the **[Brain Imaging Data Structure (BIDS)](https://bids.neuroimaging.io/)** and the **[Hierarchical Event Descriptors (HED)](https://www.hedtags.org/)**. See [Motion-BIDS](https://bids-specification.readthedocs.io/en/stable/modality-specific-files/motion.html) and definition of body parts in [HED schema browser](https://www.hedtags.org/display_hed.html) for relevant details. 
 
-# Anatomical landmarks
-We have defined a set of anatomical landmarks for each body part to ensure consistent sensor placement across different systems. These landmarks are used to define the axes of the coordinate system for each body part. The axes are defined as a percentage of the distance between the landmarks, allowing for consistent sensor placement across different body sizes. The landmarks are defined in the anatomical landmark table, which includes the name of the body part, the axis, and the direction of the axis, defined using anatomical landmarks, with axis limits ranging from 0 to 100% of the distance between the landmarks.
-
-::: {.callout-note}
-You can find the **anatomical landmark** table **[here](./anatomical_table.qmd)**.
-:::
-
 # Types of Motion Capture
 ## Optical Motion Capture (OMC)
 
@@ -47,7 +40,11 @@ Reference frames can have a hierarchical structure, where one reference frame is
 # Unified Placement Scheme
 
 ## Anatomical Coordinate System for Rigid Body Parts
-Axis definitions per body part are provided in the anatomical **[landmark table](./anatomical_table.qmd)**. The table includes the name of the body part, the axis, and the direction of the axis, defined using anatomical landmarks, with axis limits ranging from 0 to 100% of the distance between the landmarks.
+Axis definitions per body part are provided in the **[anatomical landmark table](./anatomical_table.qmd)**. The table includes the name of the body part, the axis, and the direction of the axis, defined using anatomical landmarks, with axis limits ranging from 0 to 100% of the distance between the landmarks.
+
+::: {.callout-note}
+You can find the **anatomical landmark** table **[here](./anatomical_table.qmd)**.
+:::
 
 ## Principles of Sensor Placement Annotation
 We propose a **unified placement scheme** for sensors based on anatomical landmarks and the axes defined in the anatomical landmark table. The scheme follows these principles:
