@@ -88,7 +88,7 @@
     "href": "index.html#anatomical-coordinate-system-for-rigid-body-parts",
     "title": "On the Transferability and Accessibility of Human Movement Data",
     "section": "Anatomical Coordinate System for Rigid Body Parts",
-    "text": "Anatomical Coordinate System for Rigid Body Parts\nAxis definitions per body part are provided in the anatomical landmark table. The table includes the name of the body part, the axis, and the direction of the axis, defined using anatomical landmarks, with axis limits ranging from 0 to 100% of the distance between the landmarks."
+    "text": "Anatomical Coordinate System for Rigid Body Parts\nAxis definitions per body part are provided in the anatomical landmark table. The table includes the name of the body part, the axis, and the direction of the axis, defined using anatomical landmarks, with axis limits ranging from 0 to 100% of the distance between the landmarks.\n\n\n\n\n\n\nNote\n\n\n\nYou can find the anatomical landmark table here."
   },
   {
     "objectID": "index.html#principles-of-sensor-placement-annotation",

@@ -113,7 +113,6 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#on-the-transferability-and-accessibility-of-human-movement-data" id="toc-on-the-transferability-and-accessibility-of-human-movement-data" class="nav-link active" data-scroll-target="#on-the-transferability-and-accessibility-of-human-movement-data">On the Transferability and Accessibility of Human Movement Data</a></li>
   <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#anatomical-landmarks" id="toc-anatomical-landmarks" class="nav-link" data-scroll-target="#anatomical-landmarks">Anatomical landmarks</a></li>
   <li><a href="#types-of-motion-capture" id="toc-types-of-motion-capture" class="nav-link" data-scroll-target="#types-of-motion-capture">Types of Motion Capture</a>
   <ul class="collapse">
   <li><a href="#optical-motion-capture-omc" id="toc-optical-motion-capture-omc" class="nav-link" data-scroll-target="#optical-motion-capture-omc">Optical Motion Capture (OMC)</a></li>
@@ -156,23 +155,6 @@ ul.task-list li input[type="checkbox"] {
 <p>Each motion capture method has limitations, impacting the interpretability and transferability of data from one modality to another. To address these limitations, we propose a precise annotation of features affecting the quality of motion capture interpretation.</p>
 <p>In this manuscript, we will briefly describe the main features of each modality and introduce a set of definitions that we will use throughout. We finally propose a scheme for unified sensor placement annotation with quantifiable levels of precision. We try to align this scheme with the currently available standards for data sharing and annotation, namely the <strong><a href="https://bids.neuroimaging.io/">Brain Imaging Data Structure (BIDS)</a></strong> and the <strong><a href="https://www.hedtags.org/">Hierarchical Event Descriptors (HED)</a></strong>. See <a href="https://bids-specification.readthedocs.io/en/stable/modality-specific-files/motion.html">Motion-BIDS</a> and definition of body parts in <a href="https://www.hedtags.org/display_hed.html">HED schema browser</a> for relevant details.</p>
 </section>
-<section id="anatomical-landmarks" class="level1">
-<h1>Anatomical landmarks</h1>
-<p>We have defined a set of anatomical landmarks for each body part to ensure consistent sensor placement across different systems. These landmarks are used to define the axes of the coordinate system for each body part. The axes are defined as a percentage of the distance between the landmarks, allowing for consistent sensor placement across different body sizes. The landmarks are defined in the anatomical landmark table, which includes the name of the body part, the axis, and the direction of the axis, defined using anatomical landmarks, with axis limits ranging from 0 to 100% of the distance between the landmarks.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>You can find the <strong>anatomical landmark</strong> table <strong><a href="./anatomical_table.html">here</a></strong>.</p>
-</div>
-</div>
-</section>
 <section id="types-of-motion-capture" class="level1">
 <h1>Types of Motion Capture</h1>
 <section id="optical-motion-capture-omc" class="level2">
@@ -211,7 +193,20 @@ Note
 <h1>Unified Placement Scheme</h1>
 <section id="anatomical-coordinate-system-for-rigid-body-parts" class="level2">
 <h2 class="anchored" data-anchor-id="anatomical-coordinate-system-for-rigid-body-parts">Anatomical Coordinate System for Rigid Body Parts</h2>
-<p>Axis definitions per body part are provided in the anatomical <strong><a href="./anatomical_table.html">landmark table</a></strong>. The table includes the name of the body part, the axis, and the direction of the axis, defined using anatomical landmarks, with axis limits ranging from 0 to 100% of the distance between the landmarks.</p>
+<p>Axis definitions per body part are provided in the <strong><a href="./anatomical_table.html">anatomical landmark table</a></strong>. The table includes the name of the body part, the axis, and the direction of the axis, defined using anatomical landmarks, with axis limits ranging from 0 to 100% of the distance between the landmarks.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You can find the <strong>anatomical landmark</strong> table <strong><a href="./anatomical_table.html">here</a></strong>.</p>
+</div>
+</div>
 </section>
 <section id="principles-of-sensor-placement-annotation" class="level2">
 <h2 class="anchored" data-anchor-id="principles-of-sensor-placement-annotation">Principles of Sensor Placement Annotation</h2>
