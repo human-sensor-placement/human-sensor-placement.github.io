@@ -1,1 +1,5 @@
 /* css styles */
+.callout-note .callout-body {
+    font-size: 5.5em; /* Adjust font size as needed */
+    /* Add other CSS properties as needed, like background color, border, etc. */
+}
