@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>index</title>
+<title>license</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -84,7 +84,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -111,23 +111,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#a-standardized-framework-for-sensor-placement-in-human-motion-capture" id="toc-a-standardized-framework-for-sensor-placement-in-human-motion-capture" class="nav-link active" data-scroll-target="#a-standardized-framework-for-sensor-placement-in-human-motion-capture">A Standardized Framework for Sensor Placement in Human Motion Capture</a>
-  <ul class="collapse">
-  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#fundamentals" id="toc-fundamentals" class="nav-link" data-scroll-target="#fundamentals">Fundamentals</a>
-  <ul class="collapse">
-  <li><a href="#reference-frames-and-coordinate-systems" id="toc-reference-frames-and-coordinate-systems" class="nav-link" data-scroll-target="#reference-frames-and-coordinate-systems">Reference Frames and Coordinate Systems</a></li>
-  <li><a href="#hierarchical-structure" id="toc-hierarchical-structure" class="nav-link" data-scroll-target="#hierarchical-structure">Hierarchical Structure</a></li>
-  </ul></li>
-  <li><a href="#unified-placement-framework" id="toc-unified-placement-framework" class="nav-link" data-scroll-target="#unified-placement-framework">Unified Placement Framework</a>
-  <ul class="collapse">
-  <li><a href="#anatomical-coordinate-system" id="toc-anatomical-coordinate-system" class="nav-link" data-scroll-target="#anatomical-coordinate-system">Anatomical Coordinate System</a></li>
-  <li><a href="#placement-principles" id="toc-placement-principles" class="nav-link" data-scroll-target="#placement-principles">Placement Principles</a></li>
-  <li><a href="#precision-levels" id="toc-precision-levels" class="nav-link" data-scroll-target="#precision-levels">Precision Levels</a></li>
-  <li><a href="#standardized-annotation" id="toc-standardized-annotation" class="nav-link" data-scroll-target="#standardized-annotation">Standardized Annotation</a></li>
-  </ul></li>
-  <li><a href="#how-to-contribute" id="toc-how-to-contribute" class="nav-link" data-scroll-target="#how-to-contribute">How to Contribute</a></li>
-  </ul></li>
+  <li><a href="#mit-license" id="toc-mit-license" class="nav-link active" data-scroll-target="#mit-license">MIT License</a></li>
   </ul>
 </nav>
     </div>
@@ -137,124 +121,14 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="a-standardized-framework-for-sensor-placement-in-human-motion-capture" class="level1">
-<h1>A Standardized Framework for Sensor Placement in Human Motion Capture</h1>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>This website presents a unified framework for sensor placement in human motion capture and wearable applications. For the complete research paper, please visit our preprint on <a href="https://www.biorxiv.org/">bioRxiv</a> (link to be updated).</p>
-</div>
-</div>
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>The proliferation of wearable sensors and monitoring technologies has created an urgent need for standardized sensor placement protocols. While existing standards like SENIAM address specific applications, there is no comprehensive framework that spans different sensing modalities and applications. We present a unified sensor placement standard that ensures reproducibility and transferability of human movement data across different recording systems and research domains.</p>
-</section>
-<section id="fundamentals" class="level2">
-<h2 class="anchored" data-anchor-id="fundamentals">Fundamentals</h2>
-<section id="reference-frames-and-coordinate-systems" class="level3">
-<h3 class="anchored" data-anchor-id="reference-frames-and-coordinate-systems">Reference Frames and Coordinate Systems</h3>
-<p>A <strong>reference frame</strong> consists of an origin point and a set of axes that define directions in space. In human movement analysis, we encounter multiple reference frames:</p>
-<ol type="1">
-<li><strong>Global laboratory frame</strong>: The fixed reference frame of the measurement space</li>
-<li><strong>Anatomical frames</strong>: Tied to specific body segments</li>
-<li><strong>Sensor-specific frames</strong>: Related to individual sensor positioning</li>
-</ol>
-<p>A <strong>coordinate system</strong> is fully described by: 1. The origin relative to which coordinates are expressed 2. The interpretation of the three axes 3. The units in which measurements are expressed</p>
-</section>
-<section id="hierarchical-structure" class="level3">
-<h3 class="anchored" data-anchor-id="hierarchical-structure">Hierarchical Structure</h3>
-<p>Reference frames can have a hierarchical structure, where one frame is nested within another. For example: - Torso position within the room frame - Arm position relative to the torso - Hand position relative to the arm</p>
-<p>The <strong>global reference frame</strong> sits at the top of this hierarchy, associated with the space through which the entire body moves.</p>
-</section>
-</section>
-<section id="unified-placement-framework" class="level2">
-<h2 class="anchored" data-anchor-id="unified-placement-framework">Unified Placement Framework</h2>
-<section id="anatomical-coordinate-system" class="level3">
-<h3 class="anchored" data-anchor-id="anatomical-coordinate-system">Anatomical Coordinate System</h3>
-<p>We define precise anatomical coordinate systems for each body segment using palpable landmarks. These definitions ensure consistent interpretation and implementation across different applications.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The complete <strong>anatomical landmark table</strong> with detailed coordinate systems for all body segments is available <a href="./anatomical_table.html">here</a>.</p>
-</div>
-</div>
-</section>
-<section id="placement-principles" class="level3">
-<h3 class="anchored" data-anchor-id="placement-principles">Placement Principles</h3>
-<p>Our unified placement scheme follows these core principles:</p>
-<ol type="1">
-<li>Sensor placement must be reproducible by a human with defined precision</li>
-<li>Placement coordinates relate to anatomical landmarks of the relevant body part</li>
-<li>Landmarks define the origin, direction, and limits of axes</li>
-<li>Sensor locations are reported as ratios of the axis limits</li>
-<li>Placement precision depends on landmarks, axes, and measurement method</li>
-</ol>
-</section>
-<section id="precision-levels" class="level3">
-<h3 class="anchored" data-anchor-id="precision-levels">Precision Levels</h3>
-<p>We define three levels of placement precision:</p>
-<ol type="1">
-<li><strong>Level 1</strong>: ~10% precision, such as Visual Inspection
-<ul>
-<li>Placement defined by visual inspection of body parts and landmarks</li>
-<li>Limited by human eye resolution and alignment ability</li>
-</ul></li>
-<li><strong>Level 2</strong>: ~5% precision, such as Tape Measure
-<ul>
-<li>Placement defined by measuring distances between landmarks</li>
-<li>Limited by tape measure resolution and alignment ability</li>
-</ul></li>
-<li><strong>Level 3</strong>: ~1% precision, such as 3D Scanning
-<ul>
-<li>Placement defined by 3D scanning body parts</li>
-<li>Limited by scanner resolution and alignment ability</li>
-</ul></li>
-</ol>
-</section>
-<section id="standardized-annotation" class="level3">
-<h3 class="anchored" data-anchor-id="standardized-annotation">Standardized Annotation</h3>
-<p>Sensor placement should be documented using a standardized format that includes:</p>
-<ol type="1">
-<li>Body part name</li>
-<li>Axis name and direction</li>
-<li>Axis limits</li>
-<li>Sensor location (as ratio of axis limits)</li>
-<li>Placement precision level</li>
-</ol>
-<p>This framework does not prescribe specific annotation formats; different standards and specification can use the principles to develop their own. However, this framework is designed to be compatible with existing data sharing standards such as <a href="https://bids.neuroimaging.io/">Brain Imaging Data Structure (BIDS)</a> and <a href="https://www.hedtags.org/">Hierarchical Event Descriptors (HED)</a>. Specifically, using this framework would provide precise details for the sensor placement as described in <a href="https://bids-specification.readthedocs.io/en/stable/modality-specific-files/motion.html">Motion-BIDS</a>.</p>
-<p>An exemplar annotation following the general HED instructions can be represented as:</p>
-<pre><code>(Body-part, (X-position/#, Y-position/#, Z-position/#), Precision)</code></pre>
-<p>(note that the exact HED tags are under development under <a href="https://www.hedtags.org/display_hed_prerelease.html?schema=slam_prerelease">HED-SLAM</a>)</p>
-<p>This standardization framework represents a significant step toward improving data quality, reproducibility, and interoperability in human movement analysis, from clinical biomechanics to continuous health monitoring.</p>
-</section>
-</section>
-<section id="how-to-contribute" class="level2">
-<h2 class="anchored" data-anchor-id="how-to-contribute">How to Contribute</h2>
-<p><strong>Contributions</strong>: We welcome contributions to this framework from the research community. Please submit your suggestions and feedback via the <a href="https://github.com/human-sensor-placement/human-sensor-placement.github.io">GitHub repository</a> Issues section.</p>
-<p>There are specific areas where we seek contributions:</p>
-<ul>
-<li>Standard vocabulary and communication formats through BIDS, HED, and other specifications</li>
-<li>Validation studies for inter-operator reliability assessment</li>
-<li>Mappings between this framework and existing standards (such as SENIAM)</li>
-<li>Software tools for coordinate calculation and placement visualization</li>
-</ul>
+<section id="mit-license" class="level1">
+<h1>MIT License</h1>
+<p>Copyright (c) 2024 the Authors</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
