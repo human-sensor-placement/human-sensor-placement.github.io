@@ -88,3 +88,13 @@ An exemplar annotation following the general HED instructions can be represented
 (note that the exact HED tags are under development under [HED-SLAM](https://www.hedtags.org/display_hed_prerelease.html?schema=slam_prerelease))
 
 This standardization framework represents a significant step toward improving data quality, reproducibility, and interoperability in human movement analysis, from clinical biomechanics to continuous health monitoring.
+
+## How to Contribute
+**Contributions**: We welcome contributions to this framework from the research community. Please submit your suggestions and feedback via the [GitHub repository](https://github.com/human-sensor-placement/human-sensor-placement.github.io) Issues section. 
+
+There are specific areas where we seek contributions:
+
+- Standard vocabulary and communication formats through BIDS, HED, and other specifications
+- Validation studies for inter-operator reliability assessment
+- Mappings between this framework and existing standards (such as SENIAM)
+- Software tools for coordinate calculation and placement visualization
