@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.6.39">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -35,10 +35,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-b26ae992a7951e3cccb117c0b7b1c5e5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -91,6 +91,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="./anatomical_table.html"> 
 <span class="menu-text">Landmark table</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./authors.html"> 
+<span class="menu-text">Authors</span></a>
+  </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -107,89 +111,33 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#on-the-transferability-and-accessibility-of-human-movement-data" id="toc-on-the-transferability-and-accessibility-of-human-movement-data" class="nav-link active" data-scroll-target="#on-the-transferability-and-accessibility-of-human-movement-data">On the Transferability and Accessibility of Human Movement Data</a></li>
+  <li><a href="#a-standardized-framework-for-sensor-placement-in-human-motion-capture" id="toc-a-standardized-framework-for-sensor-placement-in-human-motion-capture" class="nav-link active" data-scroll-target="#a-standardized-framework-for-sensor-placement-in-human-motion-capture">A Standardized Framework for Sensor Placement in Human Motion Capture</a>
+  <ul class="collapse">
   <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#types-of-motion-capture" id="toc-types-of-motion-capture" class="nav-link" data-scroll-target="#types-of-motion-capture">Types of Motion Capture</a>
+  <li><a href="#fundamentals" id="toc-fundamentals" class="nav-link" data-scroll-target="#fundamentals">Fundamentals</a>
   <ul class="collapse">
-  <li><a href="#optical-motion-capture-omc" id="toc-optical-motion-capture-omc" class="nav-link" data-scroll-target="#optical-motion-capture-omc">Optical Motion Capture (OMC)</a></li>
-  <li><a href="#inertial-measurement-units-imus" id="toc-inertial-measurement-units-imus" class="nav-link" data-scroll-target="#inertial-measurement-units-imus">Inertial Measurement Units (IMUs)</a></li>
-  <li><a href="#markerless-motion-capture" id="toc-markerless-motion-capture" class="nav-link" data-scroll-target="#markerless-motion-capture">Markerless Motion Capture</a></li>
+  <li><a href="#reference-frames-and-coordinate-systems" id="toc-reference-frames-and-coordinate-systems" class="nav-link" data-scroll-target="#reference-frames-and-coordinate-systems">Reference Frames and Coordinate Systems</a></li>
+  <li><a href="#hierarchical-structure" id="toc-hierarchical-structure" class="nav-link" data-scroll-target="#hierarchical-structure">Hierarchical Structure</a></li>
   </ul></li>
-  <li><a href="#definitions" id="toc-definitions" class="nav-link" data-scroll-target="#definitions">Definitions</a>
+  <li><a href="#unified-placement-framework" id="toc-unified-placement-framework" class="nav-link" data-scroll-target="#unified-placement-framework">Unified Placement Framework</a>
   <ul class="collapse">
-  <li><a href="#space" id="toc-space" class="nav-link" data-scroll-target="#space">Space</a></li>
-  <li><a href="#reference-frame" id="toc-reference-frame" class="nav-link" data-scroll-target="#reference-frame">Reference Frame</a></li>
-  <li><a href="#coordinate-system" id="toc-coordinate-system" class="nav-link" data-scroll-target="#coordinate-system">Coordinate System</a></li>
-  <li><a href="#hierarchical-structure-of-reference-frames" id="toc-hierarchical-structure-of-reference-frames" class="nav-link" data-scroll-target="#hierarchical-structure-of-reference-frames">Hierarchical Structure of Reference Frames</a></li>
-  </ul></li>
-  <li><a href="#unified-placement-scheme" id="toc-unified-placement-scheme" class="nav-link" data-scroll-target="#unified-placement-scheme">Unified Placement Scheme</a>
-  <ul class="collapse">
-  <li><a href="#anatomical-coordinate-system-for-rigid-body-parts" id="toc-anatomical-coordinate-system-for-rigid-body-parts" class="nav-link" data-scroll-target="#anatomical-coordinate-system-for-rigid-body-parts">Anatomical Coordinate System for Rigid Body Parts</a></li>
-  <li><a href="#principles-of-sensor-placement-annotation" id="toc-principles-of-sensor-placement-annotation" class="nav-link" data-scroll-target="#principles-of-sensor-placement-annotation">Principles of Sensor Placement Annotation</a></li>
-  <li><a href="#placement-precision" id="toc-placement-precision" class="nav-link" data-scroll-target="#placement-precision">Placement Precision</a></li>
-  <li><a href="#sensor-placement-annotation" id="toc-sensor-placement-annotation" class="nav-link" data-scroll-target="#sensor-placement-annotation">Sensor Placement Annotation</a>
-  <ul class="collapse">
-  <li><a href="#hierchical-event-descriptors-hed-for-sensor-placement" id="toc-hierchical-event-descriptors-hed-for-sensor-placement" class="nav-link" data-scroll-target="#hierchical-event-descriptors-hed-for-sensor-placement">Hierchical Event Descriptors (HED) for Sensor Placement</a></li>
+  <li><a href="#anatomical-coordinate-system" id="toc-anatomical-coordinate-system" class="nav-link" data-scroll-target="#anatomical-coordinate-system">Anatomical Coordinate System</a></li>
+  <li><a href="#placement-principles" id="toc-placement-principles" class="nav-link" data-scroll-target="#placement-principles">Placement Principles</a></li>
+  <li><a href="#precision-levels" id="toc-precision-levels" class="nav-link" data-scroll-target="#precision-levels">Precision Levels</a></li>
+  <li><a href="#standardized-annotation" id="toc-standardized-annotation" class="nav-link" data-scroll-target="#standardized-annotation">Standardized Annotation</a></li>
   </ul></li>
   </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
 
-<section id="on-the-transferability-and-accessibility-of-human-movement-data" class="level1">
-<h1>On the Transferability and Accessibility of Human Movement Data</h1>
-</section>
-<section id="introduction" class="level1">
-<h1>Introduction</h1>
-<p>Human motion capture encompasses various technologies and techniques to record different modalities of human motion, such as position, speed, or acceleration. These techniques are extensively used in movement science, rehabilitation, sports, and entertainment. However, the heterogeneity of recorded modalities and the varying spatial and temporal resolutions of these recordings pose challenges for the utility and interpretability of motion capture data. This necessitates a clear, unified approach for sensor placement to ensure data transferability and accessibility across different systems.</p>
-<p>Motion capture generally involves acquiring motion-related physical quantities (motion modalities) such as position, speed, and acceleration. The fundamental differences between these quantities highlight the need for different technologies and methods, including passive and active marker-based systems, IMUs, ToF, dot projection, video cameras, and deep learning techniques.</p>
-<p>Each motion capture method has limitations, impacting the interpretability and transferability of data from one modality to another. To address these limitations, we propose a precise annotation of features affecting the quality of motion capture interpretation.</p>
-<p>In this manuscript, we will briefly describe the main features of each modality and introduce a set of definitions that we will use throughout. We finally propose a scheme for unified sensor placement annotation with quantifiable levels of precision. We try to align this scheme with the currently available standards for data sharing and annotation, namely the <strong><a href="https://bids.neuroimaging.io/">Brain Imaging Data Structure (BIDS)</a></strong> and the <strong><a href="https://www.hedtags.org/">Hierarchical Event Descriptors (HED)</a></strong>. See <a href="https://bids-specification.readthedocs.io/en/stable/modality-specific-files/motion.html">Motion-BIDS</a> and definition of body parts in <a href="https://www.hedtags.org/display_hed.html">HED schema browser</a> for relevant details.</p>
-</section>
-<section id="types-of-motion-capture" class="level1">
-<h1>Types of Motion Capture</h1>
-<section id="optical-motion-capture-omc" class="level2">
-<h2 class="anchored" data-anchor-id="optical-motion-capture-omc">Optical Motion Capture (OMC)</h2>
-<p><strong>Optical Motion Capture (OMC)</strong> systems utilize multiple cameras to track the movement of reflective markers placed on a subject’s body or objects. These markers reflect light emitted by the cameras, allowing the system to triangulate their positions in three-dimensional space. The cameras record the positions of these markers at high frame rates, capturing data on <strong>marker positions (POS)</strong> and, optionally, <strong>orientation (ORNT)</strong>. Additionally, <strong>velocity (VEL)</strong>, <strong>acceleration (ACCEL)</strong>, and <strong>angular acceleration (ANGACCEL)</strong> data can be derived from the marker positions over time. <strong>Marker placement</strong> should define the type, size, and shape of markers, along with their specific placement on anatomical landmarks, such as joints and limb segments.</p>
-</section>
-<section id="inertial-measurement-units-imus" class="level2">
-<h2 class="anchored" data-anchor-id="inertial-measurement-units-imus">Inertial Measurement Units (IMUs)</h2>
-<p><strong>Inertial Measurement Units (IMUs)</strong> consist of small sensors, including accelerometers, gyroscopes, and sometimes magnetometers, attached to a subject’s body. IMUs measure changes in <strong>acceleration (ACCEL)</strong>, <strong>angular acceleration (ANGACCEL)</strong>, <strong>velocity (VEL)</strong>, and <strong>orientation (ORNT)</strong>. They are compact and versatile, making them suitable for wearable applications like sports performance analysis and motion tracking in remote or outdoor environments. <strong>Positioning of the IMU</strong> on the body should include details about the location and orientation, typically described using text and photographs or diagrams showing the sensor’s orientation relative to the body part it is attached to.</p>
-</section>
-<section id="markerless-motion-capture" class="level2">
-<h2 class="anchored" data-anchor-id="markerless-motion-capture">Markerless Motion Capture</h2>
-<p><strong>Markerless Motion Capture</strong> systems use algorithms to track a subject’s movements without physical markers. Cameras capture video footage, which software processes to extract data on <strong>position (POS)</strong>, <strong>orientation (ORNT)</strong>, and sometimes <strong>velocity (VEL)</strong> and <strong>acceleration (ACCEL)</strong>. Markerless motion capture is non-invasive and captures natural movement, making it popular in entertainment, biomechanics, and human-computer interaction. The tracked points’ definition is often software-specific, depending on which points the software allows to be tracked.</p>
-</section>
-</section>
-<section id="definitions" class="level1">
-<h1>Definitions</h1>
-<section id="space" class="level2">
-<h2 class="anchored" data-anchor-id="space">Space</h2>
-<p>In BIDS terms, <strong>space</strong> is defined as an artificial frame of reference used to describe different anatomies in a unifying manner (see Appendix VIII). Data collected in studies of physical or virtual motion typically have a reference frame anchored to the physical lab space or the virtual environment.</p>
-</section>
-<section id="reference-frame" class="level2">
-<h2 class="anchored" data-anchor-id="reference-frame">Reference Frame</h2>
-<p>A <strong>reference frame</strong> is an abstract coordinate system with a specified origin, orientation, and scale, defined by a set of reference points (Kovalevsky &amp; Mueller, 1989). It broadly describes the type of space or context associated with the data, whether the space is fixed or moving (global or local reference frame), or the identity of the object it moves with. For instance, an anatomical reference frame is fixed to the body and moves as the body moves through space.</p>
-</section>
-<section id="coordinate-system" class="level2">
-<h2 class="anchored" data-anchor-id="coordinate-system">Coordinate System</h2>
-<p>A <strong>coordinate system</strong> is fully described by (1) the origin, (2) the interpretation of the axes, and (3) the units. In BIDS terms, a coordinate system comprises information about (1) the origin relative to which the coordinate is expressed, (2) the interpretation of the three axes, and (3) the units in which the numbers are expressed.</p>
-</section>
-<section id="hierarchical-structure-of-reference-frames" class="level2">
-<h2 class="anchored" data-anchor-id="hierarchical-structure-of-reference-frames">Hierarchical Structure of Reference Frames</h2>
-<p>Reference frames can have a hierarchical structure, where one reference frame is nested within another. For example, the position of the torso can be expressed within a room reference frame, the arm position relative to the torso, and the hand position relative to the arm. The reference frame at the top of this hierarchy is the <strong>global reference frame</strong>, associated with the space through which the entire body moves. This representation is useful in scenarios where the location of the person in space is relevant rather than their posture or limb motion.</p>
-</section>
-</section>
-<section id="unified-placement-scheme" class="level1">
-<h1>Unified Placement Scheme</h1>
-<section id="anatomical-coordinate-system-for-rigid-body-parts" class="level2">
-<h2 class="anchored" data-anchor-id="anatomical-coordinate-system-for-rigid-body-parts">Anatomical Coordinate System for Rigid Body Parts</h2>
-<p>Axis definitions per body part are provided in the <strong><a href="./anatomical_table.html">anatomical landmark table</a></strong>. The table includes the name of the body part, the axis, and the direction of the axis, defined using anatomical landmarks, with axis limits ranging from 0 to 100% of the distance between the landmarks.</p>
+<section id="a-standardized-framework-for-sensor-placement-in-human-motion-capture" class="level1">
+<h1>A Standardized Framework for Sensor Placement in Human Motion Capture</h1>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -200,49 +148,97 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>You can find the <strong>anatomical landmark</strong> table <strong><a href="./anatomical_table.html">here</a></strong>.</p>
+<p>This website presents a unified framework for sensor placement in human motion capture and wearable applications. For the complete research paper, please visit our preprint on <a href="https://www.biorxiv.org/">bioRxiv</a> (link to be updated).</p>
 </div>
 </div>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>The proliferation of wearable sensors and monitoring technologies has created an urgent need for standardized sensor placement protocols. While existing standards like SENIAM address specific applications, there is no comprehensive framework that spans different sensing modalities and applications. We present a unified sensor placement standard that ensures reproducibility and transferability of human movement data across different recording systems and research domains.</p>
 </section>
-<section id="principles-of-sensor-placement-annotation" class="level2">
-<h2 class="anchored" data-anchor-id="principles-of-sensor-placement-annotation">Principles of Sensor Placement Annotation</h2>
-<p>We propose a <strong>unified placement scheme</strong> for sensors based on anatomical landmarks and the axes defined in the anatomical landmark table. The scheme follows these principles:</p>
-<pre><code>1.  Sensor placement should be reproducible by a human with defined precision.
-2.  Placement in each dimension should be related to the anatomical landmarks of the relevant body part.
-3.  Landmarks define the origin, direction, and limits of the axes.
-4.  Sensor locations should be reported as a ratio of the limits of each axis for each body part.
-5.  Placement precision depends on the precision of landmarks, axes, and the measurement method.</code></pre>
-</section>
-<section id="placement-precision" class="level2">
-<h2 class="anchored" data-anchor-id="placement-precision">Placement Precision</h2>
-<p>The precision of sensor placement is related to the precision of landmark definitions, axis orthogonality, and measurement methods. We propose the following precision levels:</p>
+<section id="fundamentals" class="level2">
+<h2 class="anchored" data-anchor-id="fundamentals">Fundamentals</h2>
+<section id="reference-frames-and-coordinate-systems" class="level3">
+<h3 class="anchored" data-anchor-id="reference-frames-and-coordinate-systems">Reference Frames and Coordinate Systems</h3>
+<p>A <strong>reference frame</strong> consists of an origin point and a set of axes that define directions in space. In human movement analysis, we encounter multiple reference frames:</p>
 <ol type="1">
-<li><strong>Visual Inspection</strong>: Placement defined by visual inspection of body parts and landmarks, limited by human eye resolution and alignment ability. Estimated precision: ~10% of the distance between landmarks.</li>
-<li><strong>Tape Measure</strong>: Placement defined by measuring distances between landmarks and placing the sensor at a specific ratio. Limited by tape measure resolution and alignment ability. Estimated precision: ~5% of the distance between landmarks.</li>
-<li><strong>3D Scanning</strong>: Placement defined by 3D scanning body parts and placing the sensor at a specific ratio. Limited by 3D scanner resolution and alignment ability. Estimated precision: ~1% of the distance between landmarks.</li>
+<li><strong>Global laboratory frame</strong>: The fixed reference frame of the measurement space</li>
+<li><strong>Anatomical frames</strong>: Tied to specific body segments</li>
+<li><strong>Sensor-specific frames</strong>: Related to individual sensor positioning</li>
 </ol>
-<p><strong>Sensor placement precision</strong> should always be reported in the dataset metadata.</p>
+<p>A <strong>coordinate system</strong> is fully described by: 1. The origin relative to which coordinates are expressed 2. The interpretation of the three axes 3. The units in which measurements are expressed</p>
 </section>
-<section id="sensor-placement-annotation" class="level2">
-<h2 class="anchored" data-anchor-id="sensor-placement-annotation">Sensor Placement Annotation</h2>
-<p>Sensor placement should be annotated using a standardized format, including:</p>
-<pre><code>1.  Body part name
-2.  Axis name
-3.  Axis direction
-4.  Axis limits
-5.  Sensor location as a ratio of the axis limits
-6.  Sensor placement precision</code></pre>
-<section id="hierchical-event-descriptors-hed-for-sensor-placement" class="level3">
-<h3 class="anchored" data-anchor-id="hierchical-event-descriptors-hed-for-sensor-placement">Hierchical Event Descriptors (HED) for Sensor Placement</h3>
-<p>We <em>propose</em> using Hierarchical Event Descriptors (HED) to annotate sensor placement in a standardized format. A possible HED tag for sensor placement could be:</p>
-<pre><code>(Body-part, (X-position/#, Y-position/#, Z-position/#), Precision)</code></pre>
-<p>Where:</p>
+<section id="hierarchical-structure" class="level3">
+<h3 class="anchored" data-anchor-id="hierarchical-structure">Hierarchical Structure</h3>
+<p>Reference frames can have a hierarchical structure, where one frame is nested within another. For example: - Torso position within the room frame - Arm position relative to the torso - Hand position relative to the arm</p>
+<p>The <strong>global reference frame</strong> sits at the top of this hierarchy, associated with the space through which the entire body moves.</p>
+</section>
+</section>
+<section id="unified-placement-framework" class="level2">
+<h2 class="anchored" data-anchor-id="unified-placement-framework">Unified Placement Framework</h2>
+<section id="anatomical-coordinate-system" class="level3">
+<h3 class="anchored" data-anchor-id="anatomical-coordinate-system">Anatomical Coordinate System</h3>
+<p>We define precise anatomical coordinate systems for each body segment using palpable landmarks. These definitions ensure consistent interpretation and implementation across different applications.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The complete <strong>anatomical landmark table</strong> with detailed coordinate systems for all body segments is available <a href="./anatomical_table.html">here</a>.</p>
+</div>
+</div>
+</section>
+<section id="placement-principles" class="level3">
+<h3 class="anchored" data-anchor-id="placement-principles">Placement Principles</h3>
+<p>Our unified placement scheme follows these core principles:</p>
+<ol type="1">
+<li>Sensor placement must be reproducible by a human with defined precision</li>
+<li>Placement coordinates relate to anatomical landmarks of the relevant body part</li>
+<li>Landmarks define the origin, direction, and limits of axes</li>
+<li>Sensor locations are reported as ratios of the axis limits</li>
+<li>Placement precision depends on landmarks, axes, and measurement method</li>
+</ol>
+</section>
+<section id="precision-levels" class="level3">
+<h3 class="anchored" data-anchor-id="precision-levels">Precision Levels</h3>
+<p>We define three levels of placement precision:</p>
+<ol type="1">
+<li><strong>Level 1</strong>: ~10% precision, such as Visual Inspection
 <ul>
-<li>Body-part: The name of the body part where the sensor is placed.</li>
-<li>X-position, Y-position, Z-position: The sensor’s position along the X, Y, and Z axes, respectively, expressed as a ratio of the axis limits.</li>
-<li>Precision: The precision level of sensor placement (e.g., Visual Inspection, Tape Measure, 3D Scanning).</li>
-</ul>
-<p>NOTE: This proopsal is still in discussion and we are open to feedback and suggestions. Importantly, we aim to establish a <strong>HED partnered schemaw</strong> to define (1) the anatomical landmarks, (2) axis limits, and (3) axis direction for each body part.</p>
+<li>Placement defined by visual inspection of body parts and landmarks</li>
+<li>Limited by human eye resolution and alignment ability</li>
+</ul></li>
+<li><strong>Level 2</strong>: ~5% precision, such as Tape Measure
+<ul>
+<li>Placement defined by measuring distances between landmarks</li>
+<li>Limited by tape measure resolution and alignment ability</li>
+</ul></li>
+<li><strong>Level 3</strong>: ~1% precision, such as 3D Scanning
+<ul>
+<li>Placement defined by 3D scanning body parts</li>
+<li>Limited by scanner resolution and alignment ability</li>
+</ul></li>
+</ol>
+</section>
+<section id="standardized-annotation" class="level3">
+<h3 class="anchored" data-anchor-id="standardized-annotation">Standardized Annotation</h3>
+<p>Sensor placement should be documented using a standardized format that includes:</p>
+<ol type="1">
+<li>Body part name</li>
+<li>Axis name and direction</li>
+<li>Axis limits</li>
+<li>Sensor location (as ratio of axis limits)</li>
+<li>Placement precision level</li>
+</ol>
+<p>This framework does not prescribe specific annotation formats; different standards and specification can use the principles to develop their own. However, this framework is designed to be compatible with existing data sharing standards such as <a href="https://bids.neuroimaging.io/">Brain Imaging Data Structure (BIDS)</a> and <a href="https://www.hedtags.org/">Hierarchical Event Descriptors (HED)</a>. Specifically, using this framework would provide precise details for the sensor placement as described in <a href="https://bids-specification.readthedocs.io/en/stable/modality-specific-files/motion.html">Motion-BIDS</a>.</p>
+<p>An exemplar annotation following the general HED instructions can be represented as:</p>
+<pre><code>(Body-part, (X-position/#, Y-position/#, Z-position/#), Precision)</code></pre>
+<p>(note that the exact HED tags are under development under <a href="https://www.hedtags.org/display_hed_prerelease.html?schema=slam_prerelease">HED-SLAM</a>)</p>
+<p>This standardization framework represents a significant step toward improving data quality, reproducibility, and interoperability in human movement analysis, from clinical biomechanics to continuous health monitoring.</p>
 
 
 </section>
@@ -332,8 +328,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -444,7 +438,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
