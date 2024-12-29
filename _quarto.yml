@@ -8,8 +8,8 @@ website:
         text: Home
       - href: anatomical_table.qmd
         text: Landmark table
-#      - href: authors.qmd
-#        text: Authors
+      - href: authors.qmd
+        text: Authors
 
 format:
   html:
@@ -19,6 +19,3 @@ format:
     grid: 
       body-width: 1500px
       sidebar-width: 50px
-
-
-

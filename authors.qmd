@@ -20,7 +20,7 @@ Julius has completed his masters in 2019 in Cognitive Neuropsychology in Oldenbu
 
 ![](pics/julius.jpg){ width="50%" class=center }
 
-## Yahya Shirazi
-Yahya is an Assistant Project Scientist at the Swartz center for Computational Neuroscience working hard to make the MOBI world a better place.
+## Seyed (Yahya) Shirazi
+Yahya is an Assistant Project Scientist at the [Swartz center for Computational Neuroscience](https://sccn.ucsd.edu) working hard to make the MOBI world a better place.
 
 ![](pics/yahya.jpg){ width="50%" class=center }

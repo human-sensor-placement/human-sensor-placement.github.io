@@ -1,88 +1,90 @@
-# On the Transferability and Accessibility of Human Movement Data
-
-# Introduction
-
-Human motion capture encompasses various technologies and techniques to record different modalities of human motion, such as position, speed, or acceleration. These techniques are extensively used in movement science, rehabilitation, sports, and entertainment. However, the heterogeneity of recorded modalities and the varying spatial and temporal resolutions of these recordings pose challenges for the utility and interpretability of motion capture data. This necessitates a clear, unified approach for sensor placement to ensure data transferability and accessibility across different systems.
-
-Motion capture generally involves acquiring motion-related physical quantities (motion modalities) such as position, speed, and acceleration. The fundamental differences between these quantities highlight the need for different technologies and methods, including passive and active marker-based systems, IMUs, ToF, dot projection, video cameras, and deep learning techniques.
-
-Each motion capture method has limitations, impacting the interpretability and transferability of data from one modality to another. To address these limitations, we propose a precise annotation of features affecting the quality of motion capture interpretation.
-
-In this manuscript, we will briefly describe the main features of each modality and introduce a set of definitions that we will use throughout. We finally propose a scheme for unified sensor placement annotation with quantifiable levels of precision. We try to align this scheme with the currently available standards for data sharing and annotation, namely the **[Brain Imaging Data Structure (BIDS)](https://bids.neuroimaging.io/)** and the **[Hierarchical Event Descriptors (HED)](https://www.hedtags.org/)**. See [Motion-BIDS](https://bids-specification.readthedocs.io/en/stable/modality-specific-files/motion.html) and definition of body parts in [HED schema browser](https://www.hedtags.org/display_hed.html) for relevant details. 
-
-# Types of Motion Capture
-## Optical Motion Capture (OMC)
-
-**Optical Motion Capture (OMC)** systems utilize multiple cameras to track the movement of reflective markers placed on a subject's body or objects. These markers reflect light emitted by the cameras, allowing the system to triangulate their positions in three-dimensional space. The cameras record the positions of these markers at high frame rates, capturing data on **marker positions (POS)** and, optionally, **orientation (ORNT)**. Additionally, **velocity (VEL)**, **acceleration (ACCEL)**, and **angular acceleration (ANGACCEL)** data can be derived from the marker positions over time. **Marker placement** should define the type, size, and shape of markers, along with their specific placement on anatomical landmarks, such as joints and limb segments.
-
-## Inertial Measurement Units (IMUs)
-
-**Inertial Measurement Units (IMUs)** consist of small sensors, including accelerometers, gyroscopes, and sometimes magnetometers, attached to a subject's body. IMUs measure changes in **acceleration (ACCEL)**, **angular acceleration (ANGACCEL)**, **velocity (VEL)**, and **orientation (ORNT)**. They are compact and versatile, making them suitable for wearable applications like sports performance analysis and motion tracking in remote or outdoor environments. **Positioning of the IMU** on the body should include details about the location and orientation, typically described using text and photographs or diagrams showing the sensor's orientation relative to the body part it is attached to.
-
-## Markerless Motion Capture
-
-**Markerless Motion Capture** systems use algorithms to track a subject's movements without physical markers. Cameras capture video footage, which software processes to extract data on **position (POS)**, **orientation (ORNT)**, and sometimes **velocity (VEL)** and **acceleration (ACCEL)**. Markerless motion capture is non-invasive and captures natural movement, making it popular in entertainment, biomechanics, and human-computer interaction. The tracked points' definition is often software-specific, depending on which points the software allows to be tracked.
-
-# Definitions
-
-## Space
-In BIDS terms, **space** is defined as an artificial frame of reference used to describe different anatomies in a unifying manner (see Appendix VIII). Data collected in studies of physical or virtual motion typically have a reference frame anchored to the physical lab space or the virtual environment.
-
-## Reference Frame
-A **reference frame** is an abstract coordinate system with a specified origin, orientation, and scale, defined by a set of reference points (Kovalevsky & Mueller, 1989). It broadly describes the type of space or context associated with the data, whether the space is fixed or moving (global or local reference frame), or the identity of the object it moves with. For instance, an anatomical reference frame is fixed to the body and moves as the body moves through space.
-
-## Coordinate System
-A **coordinate system** is fully described by (1) the origin, (2) the interpretation of the axes, and (3) the units. In BIDS terms, a coordinate system comprises information about (1) the origin relative to which the coordinate is expressed, (2) the interpretation of the three axes, and (3) the units in which the numbers are expressed.
-
-## Hierarchical Structure of Reference Frames
-Reference frames can have a hierarchical structure, where one reference frame is nested within another. For example, the position of the torso can be expressed within a room reference frame, the arm position relative to the torso, and the hand position relative to the arm. The reference frame at the top of this hierarchy is the **global reference frame**, associated with the space through which the entire body moves. This representation is useful in scenarios where the location of the person in space is relevant rather than their posture or limb motion.
-
-# Unified Placement Scheme
-
-## Anatomical Coordinate System for Rigid Body Parts
-Axis definitions per body part are provided in the **[anatomical landmark table](./anatomical_table.qmd)**. The table includes the name of the body part, the axis, and the direction of the axis, defined using anatomical landmarks, with axis limits ranging from 0 to 100% of the distance between the landmarks.
+# A Standardized Framework for Sensor Placement in Human Motion Capture
 
 ::: {.callout-note}
-You can find the **anatomical landmark** table **[here](./anatomical_table.qmd)**.
+This website presents a unified framework for sensor placement in human motion capture and wearable applications. For the complete research paper, please visit our preprint on [bioRxiv](https://www.biorxiv.org/) (link to be updated).
 :::
 
-## Principles of Sensor Placement Annotation
-We propose a **unified placement scheme** for sensors based on anatomical landmarks and the axes defined in the anatomical landmark table. The scheme follows these principles:
+## Introduction
 
-    1.	Sensor placement should be reproducible by a human with defined precision.
-    2.	Placement in each dimension should be related to the anatomical landmarks of the relevant body part.
-    3.	Landmarks define the origin, direction, and limits of the axes.
-    4.	Sensor locations should be reported as a ratio of the limits of each axis for each body part.
-    5.	Placement precision depends on the precision of landmarks, axes, and the measurement method.
+The proliferation of wearable sensors and monitoring technologies has created an urgent need for standardized sensor placement protocols. While existing standards like SENIAM address specific applications, there is no comprehensive framework that spans different sensing modalities and applications. We present a unified sensor placement standard that ensures reproducibility and transferability of human movement data across different recording systems and research domains.
 
-## Placement Precision
-The precision of sensor placement is related to the precision of landmark definitions, axis orthogonality, and measurement methods. We propose the following precision levels:
+## Fundamentals
 
-1.	**Visual Inspection**: Placement defined by visual inspection of body parts and landmarks, limited by human eye resolution and alignment ability. Estimated precision: ~10% of the distance between landmarks.
-2.	**Tape Measure**: Placement defined by measuring distances between landmarks and placing the sensor at a specific ratio. Limited by tape measure resolution and alignment ability. Estimated precision: ~5% of the distance between landmarks.
-3. **3D Scanning**: Placement defined by 3D scanning body parts and placing the sensor at a specific ratio. Limited by 3D scanner resolution and alignment ability. Estimated precision: ~1% of the distance between landmarks.
+### Reference Frames and Coordinate Systems
 
-**Sensor placement precision** should always be reported in the dataset metadata.
+A **reference frame** consists of an origin point and a set of axes that define directions in space. In human movement analysis, we encounter multiple reference frames:
 
-## Sensor Placement Annotation
-Sensor placement should be annotated using a standardized format, including:
+1. **Global laboratory frame**: The fixed reference frame of the measurement space
+2. **Anatomical frames**: Tied to specific body segments
+3. **Sensor-specific frames**: Related to individual sensor positioning
 
-    1.	Body part name
-    2.	Axis name
-    3.	Axis direction
-    4.	Axis limits
-    5.	Sensor location as a ratio of the axis limits
-    6.	Sensor placement precision
+A **coordinate system** is fully described by:
+1. The origin relative to which coordinates are expressed
+2. The interpretation of the three axes
+3. The units in which measurements are expressed
 
-### Hierchical Event Descriptors (HED) for Sensor Placement
-We *propose* using Hierarchical Event Descriptors (HED) to annotate sensor placement in a standardized format. A possible HED tag for sensor placement could be:
+### Hierarchical Structure
 
-    (Body-part, (X-position/#, Y-position/#, Z-position/#), Precision)
+Reference frames can have a hierarchical structure, where one frame is nested within another. For example:
+- Torso position within the room frame
+- Arm position relative to the torso
+- Hand position relative to the arm
 
-Where:
-    
-- Body-part: The name of the body part where the sensor is placed.
-- X-position, Y-position, Z-position: The sensor's position along the X, Y, and Z axes, respectively, expressed as a ratio of the axis limits.
-- Precision: The precision level of sensor placement (e.g., Visual Inspection, Tape Measure, 3D Scanning).
+The **global reference frame** sits at the top of this hierarchy, associated with the space through which the entire body moves.
 
-NOTE: This proopsal is still in discussion and we are open to feedback and suggestions. Importantly, we aim to establish a **HED partnered schemaw** to define (1) the anatomical landmarks, (2) axis limits, and (3) axis direction for each body part.
+## Unified Placement Framework
+
+### Anatomical Coordinate System
+
+We define precise anatomical coordinate systems for each body segment using palpable landmarks. These definitions ensure consistent interpretation and implementation across different applications.
+
+::: {.callout-note}
+The complete **anatomical landmark table** with detailed coordinate systems for all body segments is available [here](./anatomical_table.qmd).
+:::
+
+### Placement Principles
+
+Our unified placement scheme follows these core principles:
+
+1. Sensor placement must be reproducible by a human with defined precision
+2. Placement coordinates relate to anatomical landmarks of the relevant body part
+3. Landmarks define the origin, direction, and limits of axes
+4. Sensor locations are reported as ratios of the axis limits
+5. Placement precision depends on landmarks, axes, and measurement method
+
+### Precision Levels
+
+We define three levels of placement precision:
+
+1. **Level 1**: ~10% precision, such as Visual Inspection
+   - Placement defined by visual inspection of body parts and landmarks
+   - Limited by human eye resolution and alignment ability
+
+2. **Level 2**: ~5% precision, such as Tape Measure
+   - Placement defined by measuring distances between landmarks
+   - Limited by tape measure resolution and alignment ability
+
+3. **Level 3**: ~1% precision, such as 3D Scanning
+   - Placement defined by 3D scanning body parts
+   - Limited by scanner resolution and alignment ability
+
+### Standardized Annotation
+
+Sensor placement should be documented using a standardized format that includes:
+
+1. Body part name
+2. Axis name and direction
+3. Axis limits
+4. Sensor location (as ratio of axis limits)
+5. Placement precision level
+
+This framework does not prescribe specific annotation formats; different standards and specification can use the principles to develop their own. However, this framework is designed to be compatible with existing data sharing standards such as [Brain Imaging Data Structure (BIDS)](https://bids.neuroimaging.io/) and [Hierarchical Event Descriptors (HED)](https://www.hedtags.org/). Specifically, using this framework would provide precise details for the sensor placement as described in [Motion-BIDS](https://bids-specification.readthedocs.io/en/stable/modality-specific-files/motion.html).
+
+An exemplar annotation following the general HED instructions can be represented as:
+
+```
+(Body-part, (X-position/#, Y-position/#, Z-position/#), Precision)
+```
+(note that the exact HED tags are under development under [HED-SLAM](https://www.hedtags.org/display_hed_prerelease.html?schema=slam_prerelease))
+
+This standardization framework represents a significant step toward improving data quality, reproducibility, and interoperability in human movement analysis, from clinical biomechanics to continuous health monitoring.
