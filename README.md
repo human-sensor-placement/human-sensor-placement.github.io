@@ -9,14 +9,14 @@ This framework addresses the critical need for standardized sensor placement pro
 ## Key Features
 
 - **Precise Anatomical Landmarks**: Comprehensive set of anatomical landmarks chosen for reliability and accessibility
-- **Standardized Coordinate Systems**: Clear definitions for 15 major body segments
+- **Standardized Coordinate Systems**: Clear definitions for 16 major body segments
 - **Hierarchical Reference Frames**: Structured approach to relating different coordinate systems
 - **Quantified Precision Levels**: Three-tier system for placement accuracy
 - **BIDS/HED Compatible**: Designed to work with existing data sharing standards
 
 ## Documentation
 
-- 📖 [Full Paper on bioRxiv](https://www.biorxiv.org/) (link to be updated)
+- 📖 [Full Paper on ArXiv](https://doi.org/10.48550/arXiv.2412.21159)
 - 🌐 [Framework Website](https://human-sensor-placement.github.io)
 - 📊 [Complete Anatomical Table](https://human-sensor-placement.github.io/anatomical_table.html)
 
