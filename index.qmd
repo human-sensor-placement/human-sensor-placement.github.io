@@ -1,7 +1,7 @@
 # A Standardized Framework for Sensor Placement in Human Motion Capture
 
 ::: {.callout-note}
-This website presents a unified framework for sensor placement in human motion capture and wearable applications. For the complete research paper, please visit our preprint on [ArRxiv](https://doi.org/10.48550/arXiv.2412.21159).
+This website presents a unified framework for sensor placement in human motion capture and wearable applications. For the complete research paper, please visit our preprint on [ArXiv](https://doi.org/10.48550/arXiv.2412.21159).
 :::
 
 ## Introduction
