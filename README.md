@@ -1,4 +1,4 @@
-[![DOI](https://zenodo.org/badge/797952110.svg)](https://doi.org/10.5281/zenodo.14603935)
+[![DOI](https://zenodo.org/badge/797952110.svg)](https://doi.org/10.5281/zenodo.14603935)     [![arXiv](https://img.shields.io/badge/arXiv-2412.21159-b31b1b.svg)](https://arxiv.org/abs/2412.21159)
 
 # A Standardized Framework for Sensor Placement in Human Motion Capture
 
@@ -18,7 +18,7 @@ This framework addresses the critical need for standardized sensor placement pro
 
 ## Documentation
 
-- 📖 [Full Paper on ArXiv](https://doi.org/10.48550/arXiv.2412.21159)
+- 📖 [Full Paper on arXiv](https://doi.org/10.48550/arXiv.2412.21159)
 - 🌐 [Framework Website](https://human-sensor-placement.github.io)
 - 📊 [Complete Anatomical Table](https://human-sensor-placement.github.io/anatomical_table.html)
 
