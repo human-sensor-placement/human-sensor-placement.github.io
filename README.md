@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/797952110.svg)](https://doi.org/10.5281/zenodo.14603935)
+
 # A Standardized Framework for Sensor Placement in Human Motion Capture
 
 A unified framework for standardizing sensor placement across different sensing modalities and applications in human motion capture and wearable technology.
