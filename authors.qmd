@@ -24,3 +24,6 @@ Julius has completed his masters in 2019 in Cognitive Neuropsychology in Oldenbu
 Yahya is an Assistant Project Scientist at the [Swartz center for Computational Neuroscience](https://sccn.ucsd.edu) working hard to make the MOBI world a better place.
 
 ![](pics/yahya.jpg){ width="50%" class=center }
+
+## Lara Godbersen
+Lara is a Master student at the Kiel University. She is interested in the field of cognitive neuroscience and just finished her master thesis with advanced EEG processing.
