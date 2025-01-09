@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.40">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>paper</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-2f5b8769f52f6b4069dd1b633220925d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./anatomical_table.html"> 
+<span class="menu-text">Landmark table</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./authors.html"> 
+<span class="menu-text">Authors</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#a-standardized-framework-for-sensor-placement-in-human-motion-capture-and-wearable-applications" id="toc-a-standardized-framework-for-sensor-placement-in-human-motion-capture-and-wearable-applications" class="nav-link active" data-scroll-target="#a-standardized-framework-for-sensor-placement-in-human-motion-capture-and-wearable-applications">A Standardized Framework for Sensor Placement in Human Motion Capture and Wearable Applications</a>
+  <ul class="collapse">
+  <li><a href="#abstract" id="toc-abstract" class="nav-link" data-scroll-target="#abstract">Abstract</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#fundamentals-of-the-framework" id="toc-fundamentals-of-the-framework" class="nav-link" data-scroll-target="#fundamentals-of-the-framework">Fundamentals of the Framework</a>
+  <ul class="collapse">
+  <li><a href="#reference-frame-definition" id="toc-reference-frame-definition" class="nav-link" data-scroll-target="#reference-frame-definition">Reference Frame Definition</a></li>
+  <li><a href="#coordinate-transformations-between-reference-frames" id="toc-coordinate-transformations-between-reference-frames" class="nav-link" data-scroll-target="#coordinate-transformations-between-reference-frames">Coordinate Transformations between Reference Frames</a></li>
+  <li><a href="#anatomical-landmark-system" id="toc-anatomical-landmark-system" class="nav-link" data-scroll-target="#anatomical-landmark-system">Anatomical Landmark System</a></li>
+  <li><a href="#precision-specifications" id="toc-precision-specifications" class="nav-link" data-scroll-target="#precision-specifications"><strong>Precision Specifications</strong></a></li>
+  </ul></li>
+  <li><a href="#unified-placement-scheme" id="toc-unified-placement-scheme" class="nav-link" data-scroll-target="#unified-placement-scheme"><strong>Unified Placement Scheme</strong></a></li>
+  <li><a href="#anatomical-landmark-implementation" id="toc-anatomical-landmark-implementation" class="nav-link" data-scroll-target="#anatomical-landmark-implementation">Anatomical Landmark Implementation</a></li>
+  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion">Discussion</a></li>
+  <li><a href="#code-availability" id="toc-code-availability" class="nav-link" data-scroll-target="#code-availability">Code availability</a></li>
+  <li><a href="#author-contributions" id="toc-author-contributions" class="nav-link" data-scroll-target="#author-contributions">Author Contributions</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+<section id="a-standardized-framework-for-sensor-placement-in-human-motion-capture-and-wearable-applications" class="level1">
+<h1>A Standardized Framework for Sensor Placement in Human Motion Capture and Wearable Applications</h1>
+<p><strong>Published on arXiv: <a href="https://arxiv.org/abs/2412.21159">2412.21159</a></strong></p>
+<p><strong>By: Seyed Yahya Shirazi1*, Julius Welzel2*, Sein Jeung3,4*, and Lara Godbersen2</strong></p>
+<p>1. Swartz Center for Computational Neuroscience, Institute for Neural Computation, University of California San Diego, La Jolla, CA, USA<br>
+2. Kiel University, Kiel, Germany<br>
+3. Technical University of Berlin, Berlin, Germany.<br>
+4. Max Planck Institute for Human Cognitive and Brain Sciences, Leipzig, Germany.<br>
+* Equal contribution.</p>
+<section id="abstract" class="level2">
+<h2 class="anchored" data-anchor-id="abstract">Abstract</h2>
+<p>The proliferation of wearable sensors and monitoring technologies has created an urgent need for standardized sensor placement protocols. While existing standards like SENIAM address specific applications, no comprehensive framework spans different sensing modalities and applications. We present a unified sensor placement standard that ensures the reproducibility and transferability of human movement and physiological data across various systems and research domains. Our framework provides precise anatomical landmarks, coordinate systems, and placement protocols with defined precision levels, compatible with existing data-sharing standards such as the Brain Imaging Data Structure (BIDS) and Heirechciacal Event Descriptors (HED). This framework aims to enhance data quality, reproducibility, and interoperability in applications ranging from lab-based clinical biomechanics to continuous health monitoring in everyday life.</p>
+</section>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>The measurement of human movement and physiological signals is fundamental to fields ranging from biomechanics and clinical rehabilitation to continuous health monitoring and virtual reality. Technological advancements in motion capture systems, inertial sensors, and wearable devices have expanded analysis beyond traditional laboratory settings. Standardization of sensor placement practices is essential to improve data quality, reproducibility, and interoperability across these diverse applications.</p>
+<p>The impact of sensor placement variation on data quality is well-documented. In biomechanics research, studies have shown that even small changes in sensor position can significantly affect measurement outcomes. In electromyography (EMG), electrode placement variations of just 2-3 cm can lead to signal amplitude changes of up to 50% and altered muscle activation patterns <a href="https://paperpile.com/c/bZjajr/kcSa">[1]</a>. Similar effects have been observed with inertial measurement units (IMUs), where placement variations can substantially impact acceleration and angular velocity measurements during dynamic movements <a href="https://paperpile.com/c/bZjajr/vp3l">[2]</a>. The same applies to Optical Motion Capture, where deviations from the predefined marker positions affect gait detection accuracy <a href="https://paperpile.com/c/bZjajr/k0rt">[3]</a>.</p>
+<p>Precise sensor placement is critical beyond movement analysis. In electrocardiography (ECG), electrode positioning directly affects waveform morphology and diagnostic accuracy, with small deviations potentially leading to misinterpretation of cardiac conditions <a href="https://paperpile.com/c/bZjajr/uuzS+tWe8+MWrX">[4-6]</a>. Continuous glucose monitoring systems require consistent sensor placement to maintain measurement accuracy and reduce variability. Temperature monitoring, particularly for early fever detection or athletic performance, depends heavily on sensor location due to significant variations in skin temperature across different body regions. Emerging technologies like sweat-based biochemical sensors also necessitate standardized placement to account for regional variations in sweat gland density and composition.</p>
+<p>Current standards for sensor placement, such as SENIAM for EMG <a href="https://paperpile.com/c/bZjajr/ejU8">[7]</a> or the Mason-Likar configuration for ECG <a href="https://paperpile.com/c/bZjajr/d5oE+pUjQ">[8,9]</a>, while valuable, are limited and not comprehensive for modern sensing modalities. Moreover, these standards are often not sufficiently implemented in practice <a href="https://paperpile.com/c/bZjajr/G40j+V9RF">[10,11]</a>, failing to incorporate a wider user base with varying levels of expertise in anatomy, biomechanics, and biosensors.</p>
+<p>The emergence of consumer wearables and virtual reality applications has further highlighted the limitations of current standards. These technologies often combine multiple sensing modalities—motion, heart rate, temperature, and other physiological parameters—requiring consistent sensor placement for reliable long-term monitoring and accurate data collection. The growing integration of these technologies demands a unified approach to sensor placement that accommodates different measurement contexts while maintaining precision and reproducibility.</p>
+<p>The need for a comprehensive sensor placement standard is increasingly pressing with the rise of large-scale data-sharing initiatives and the use of machine-learning techniques in health monitoring and movement analysis. These applications require consistent and well-documented data collection protocols for meaningful comparisons and reliable results. Current data-sharing standards like BIDS <a href="https://paperpile.com/c/bZjajr/LTAw">[12]</a> and HED <a href="https://paperpile.com/c/bZjajr/u0hh">[13]</a> provide robust frameworks for data organization but lack specific guidelines for sensor placement across the full range of human monitoring applications.</p>
+<p>We present a unified sensor placement framework addressing these challenges through a comprehensive system of anatomical landmarks, coordinate systems, and placement protocols. Our standard defines anatomical reference points and coordinate systems for body segments <a href="https://paperpile.com/c/bZjajr/3UVA">[14]</a>, establishes a hierarchical system of reference frames for different measurement contexts, and provides quantifiable levels of placement precision with associated uncertainty estimates. The framework is technology- and specification-agnostic, accommodating various sensing modalities while maintaining compatibility with existing data-sharing standards. This framework will also allow existing records to be annotated with the proposed framework.</p>
+<p>The following sections detail our proposed standard, beginning with fundamental definitions and proceeding to specific placement protocols for different body segments and sensing modalities. We provide guidance on precision levels and documentation requirements, concluding with recommendations for implementation and validation. This framework represents a significant step toward standardizing sensor placement across the broader field of human biosensing, from traditional biomechanics applications to emerging technologies in continuous health monitoring and virtual reality.</p>
+</section>
+<section id="fundamentals-of-the-framework" class="level2">
+<h2 class="anchored" data-anchor-id="fundamentals-of-the-framework">Fundamentals of the Framework</h2>
+<section id="reference-frame-definition" class="level3">
+<h3 class="anchored" data-anchor-id="reference-frame-definition">Reference Frame Definition</h3>
+<p>The foundation of our standardization framework rests on precise definitions of anatomical landmarks and spatial references. These definitions ensure consistent interpretation and implementation across different applications and laboratories.</p>
+<p>A reference frame consists of an origin point and a set of axes that define directions in space. In human movement analysis, we encounter multiple reference frames: the global laboratory frame, anatomical frames tied to body segments, and sensor- or system-specific frames. The relationships between these frames must be clearly defined to ensure meaningful data interpretation.</p>
+<p>The anatomical reference frame for each body segment is defined using palpable landmarks that can be reliably identified (see <a href="#anatomical-landmark-system">Anatomical Landmark System</a>). These landmarks are used to define the coordinate system of a body segment to provide reference points for sensor placement. Our framework defines each coordinate system through:<br>
+1. An origin point based on specific anatomical landmarks<br>
+2. Primary axes aligned with functional anatomical directions<br>
+3. Clear definitions of positive directions and measurement conventions</p>
+</section>
+<section id="coordinate-transformations-between-reference-frames" class="level3">
+<h3 class="anchored" data-anchor-id="coordinate-transformations-between-reference-frames">Coordinate Transformations between Reference Frames</h3>
+<p>Our framework defines sensor placement locations using local anatomical coordinate systems. These local systems are part of a larger kinematic chain. This approach aligns with practices in biomechanics and robotics, where transformations between local and global coordinate systems are computed through forward kinematics. Although our standard focuses on precise local definitions, users can derive global coordinates through standard transformation techniques. This separation of local definitions from global transformations ensures both precision in sensor placement and flexibility in data analysis.</p>
+</section>
+<section id="anatomical-landmark-system" class="level3">
+<h3 class="anchored" data-anchor-id="anatomical-landmark-system">Anatomical Landmark System</h3>
+<p>Our framework establishes a comprehensive set of anatomical landmarks chosen for their reliability, accessibility across different body types, relevance to common sensor placement needs, and minimal displacement during movement. Each landmark is defined using standardized anatomical terminology and palpation methods to ensure reproducibility. The complete set of landmarks and their definitions is provided in the anatomical landmark table (<a href="https://human-sensor-placement.github.io/anatomical_table.html">link</a>), forming the backbone of our standardization system.</p>
+</section>
+<section id="precision-specifications" class="level3">
+<h3 class="anchored" data-anchor-id="precision-specifications"><strong>Precision Specifications</strong></h3>
+<p>Sensor placement precision is quantified through a three-tier system based on the measurement method used:<br>
+<strong>Level 1</strong>: ±10% of reference distance, example: visual inspection or eyeballing<br>
+<strong>Level 2</strong>: ±5% of reference distance, example: manual measurement using tape<br>
+<strong>Level 3</strong>:±1% of reference distance, example: 3D scanning or motion capture-assisted placement</p>
+<p>These precision levels must be reported with all sensor placement descriptions to ensure appropriate interpretation of the collected data.</p>
+</section>
+</section>
+<section id="unified-placement-scheme" class="level2">
+<h2 class="anchored" data-anchor-id="unified-placement-scheme"><strong>Unified Placement Scheme</strong></h2>
+<p>The core of our framework is a unified placement scheme that defines sensor locations relative to anatomical landmarks using standardized coordinate systems. Each sensor location is specified in three steps:</p>
+<ol type="1">
+<li>Identify the relevant body segment and its anatomical coordinate system<br>
+</li>
+<li>Determine the location using normalized coordinates within that local body segment coordinate system (0-100% along each axis)<br>
+</li>
+<li>Determine the precision level of the sensor location (choose one precision level, see Precision Specifications above).</li>
+</ol>
+<p>This standardized approach ensures reproducibility across different operators and laboratories, scalability to different body sizes and proportions, and clear documentation in research publications. The scheme provides a foundation for consistent sensor placement while maintaining the flexibility needed for diverse applications in human movement analysis.</p>
+</section>
+<section id="anatomical-landmark-implementation" class="level2">
+<h2 class="anchored" data-anchor-id="anatomical-landmark-implementation">Anatomical Landmark Implementation</h2>
+<p>The practical implementation of our framework relies on precisely defined anatomical landmarks and their relationships. While the complete system covers all major body segments, we present here the thorax/upper torso as an exemplar of our approach (Table 1). The complete table for all body segments is available at <a href="https://human-sensor-placement.github.io/anatomical_table.html">human-sensor-placement.github.io/anatomical_table.html</a> and in the supplementary materials.</p>
+<p>Table 1: Example Implementation for the Thorax/Upper Torso</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Body Part</th>
+<th style="text-align: left;">Anatomical Description</th>
+<th style="text-align: left;">Anatomical Landmarks</th>
+<th style="text-align: left;">Coordinate System</th>
+<th style="text-align: left;">Image</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Torso-chest</td>
+<td style="text-align: left;">The upper part of the torso, extending from the base of the neck to the diaphragm, framed by the rib cage, which includes the ribs, sternum, and thoracic vertebrae.</td>
+<td style="text-align: left;">Left Acromion Process (LAP), Right Acromion Process (RAP), C7 vertebra (C7), Xiphoid Process</td>
+<td style="text-align: left;">X: LAP → RAP; Y: C7 → Xiphoid Process (shorter axis); Z: C7 → Xiphoid Process (longer axis)</td>
+<td style="text-align: left;"><img src="pics/ilustrations/2_torso-chest.jpeg" class="img-fluid"></td>
+</tr>
+</tbody>
+</table>
+<p>This example demonstrates the essential aspects of our framework through several key components. The anatomical definition provides a clear description of the body segment and its boundaries using standard anatomical terminology. The selected landmarks consist of easily palpable and minimally mobile anatomical points that form a stable reference frame. The coordinate system definition specifies unambiguous axes using landmark pairs, with clear directional conventions. Practical applications are illustrated through example placement coordinates for common sensing modalities, expressed as percentages along each defined axis.</p>
+<p>The same systematic approach is applied to all body segments in the complete reference table. Each entry maintains this structure while accounting for segment-specific anatomical considerations and common sensing applications. The complete table includes detailed specifications for 15 major body segments, covering the full body from head to feet. This comprehensive reference enables consistent sensor placement across different applications while maintaining the precision and reproducibility principles outlined in our framework.</p>
+</section>
+<section id="discussion" class="level2">
+<h2 class="anchored" data-anchor-id="discussion">Discussion</h2>
+<p>We present a comprehensive framework standardizing sensor placement in human movement and physiological monitoring applications. Through precise definitions of anatomical landmarks, coordinate systems, and placement protocols, we enable reproducible sensor positioning across different applications and laboratories. Our approach offers a systematic method for documenting and reproducing sensor placements through normalized coordinate systems and clearly defined precision levels.</p>
+<p>Our framework bridges existing standards across different domains. While SENIAM for electromyography and Mason-Likar for electrocardiography serve their specific applications well, modern applications demand integration of multiple sensing modalities. We complement these standards by providing a common language for sensor placement that maps to domain-specific requirements. This standardization enhances data FAIRness (Findability, Accessibility, Interoperability, and Reusability) by enabling clear documentation and facilitating data sharing across research groups and applications.</p>
+<p>We identify several key developments necessary to enhance the practical implementation of this framework. First, this framework does not provide specific vocabulary or a standardized way to communicate sensor placement. Standard bodies such as BIDS and HED can provide formal specifications, vocabulary cross-references, and specific guidelines based on their norms and guidelines. A validation study involving multiple operators placing sensors according to the guidelines is needed to quantify inter-operator reliability and refine precision specifications. We also plan to develop explicit mappings between our framework and existing standards like SENIAM to facilitate adoption. Furthermore, software tools for coordinate calculation and placement visualization will support practical implementation.</p>
+<p>Limitations of this framework include operator dependency and anatomical variability considerations. While we provide precise definitions and measurement protocols, achieving specified precision levels depends on operator expertise and training. The framework cannot fully address the subjective aspects of anatomical landmark identification, particularly in subjects with varying body compositions. Additionally, our current focus on static placement may require adaptation for dynamic applications where sensor position might change during movement.</p>
+<p>We believe our standardization framework significantly advances the quality and reproducibility of human movement and physiological data collection. By unifying sensor placement across different applications, this framework addresses a critical need in biomechanics and health science research. Our framework’s flexibility in accommodating different precision requirements while maintaining consistency makes it valuable for applications ranging from clinical research to consumer health monitoring. As wearable technology continues to advance and integrate multiple sensing modalities, this standardization effort will become increasingly important. We provide a foundation for future developments in sensor placement standardization and welcome community feedback to evolve the framework alongside technological advancement.</p>
+</section>
+<section id="code-availability" class="level2">
+<h2 class="anchored" data-anchor-id="code-availability">Code availability</h2>
+<p>All the information about the framework is available on <a href="https://human-sensor-placement.github.io/">human-sensor-placement.github.io</a> and the source files are available at the corresponding GitHub repository<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
+</section>
+<section id="author-contributions" class="level2">
+<h2 class="anchored" data-anchor-id="author-contributions">Author Contributions</h2>
+<p>JW proposed the framewrok. SYS, JW and SJ formalized the framwwoek structure. SYS formulated the anatomical landmarks. SYS, JW, and SJ drafted the framework and the manuscript. LG created the graphics.</p>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<p>1. <a href="http://paperpile.com/b/bZjajr/kcSa">Wong Y-M, Ng GYF. Surface electrode placement affects the EMG recordings of the quadriceps muscles. Phys Ther Sport. 2006;7: 122-127.</a></p>
+<p>2. <a href="http://paperpile.com/b/bZjajr/vp3l">Tan T, Chiasson DP, Hu H, Shull PB. Influence of IMU position and orientation placement errors on ground reaction force estimation. J Biomech. 2019;97: 109416.</a></p>
+<p>3. <a href="http://paperpile.com/b/bZjajr/k0rt">Osis ST, Hettinga BA, Macdonald S, Ferber R. Effects of simulated marker placement deviations on running kinematics and evaluation of a morphometric-based placement feedback method. PLoS One. 2016;11: e0147111.</a></p>
+<p>4. <a href="http://paperpile.com/b/bZjajr/uuzS">Bond RR, Finlay DD, Nugent CD, Breen C, Guldenring D, Daly MJ. The effects of electrode misplacement on clinicians’ interpretation of the standard 12-lead electrocardiogram. Eur J Intern Med. 2012;23: 610-615.</a></p>
+<p>5. <a href="http://paperpile.com/b/bZjajr/tWe8">Bond RR, Finlay DD, Nugent CD, Moore G, Guldenring D. A simulation tool for visualizing and studying the effects of electrode misplacement on the 12-lead electrocardiogram. J Electrocardiol. 2011;44: 439-444.</a></p>
+<p>6. <a href="http://paperpile.com/b/bZjajr/MWrX">Roy SK, Shah SU, Villa-Lopez E, Murillo M, Arenas N, Oshima K, et al.&nbsp;Comparison of electrocardiogram quality and clinical interpretations using prepositioned ECG electrodes and conventional individual electrodes. J Electrocardiol. 2020;59: 126-133.</a></p>
+<p>7. <a href="http://paperpile.com/b/bZjajr/ejU8">Hermens HJ, Freriks B, Merletti R, Stegeman D, Blok J, Rau G, et al.&nbsp;European recommendations for surface electromyography. Roessingh research and development. 1999;8: 13-54.</a></p>
+<p>8. <a href="http://paperpile.com/b/bZjajr/d5oE">Mason RE, Likar I. A new system of multiple-lead exercise electrocardiography. Am Heart J. 1966;71: 196-205.</a></p>
+<p>9. <a href="http://paperpile.com/b/bZjajr/pUjQ">Francis J. ECG monitoring leads and special leads. Indian Pacing Electrophysiol J. 2016;16: 92-95.</a></p>
+<p>10. <a href="http://paperpile.com/b/bZjajr/G40j">Campanini I, Disselhorst-Klug C, Rymer WZ, Merletti R. Surface EMG in clinical assessment and neurorehabilitation: Barriers limiting its use. Front Neurol. 2020;11: 934.</a></p>
+<p>11. <a href="http://paperpile.com/b/bZjajr/V9RF">Manca A, Cereatti A, Bar-On L, Botter A, Della Croce U, Knaflitz M, et al.&nbsp;A survey on the use and barriers of surface electromyography in neurorehabilitation. Front Neurol. 2020;11: 573616.</a></p>
+<p>12. <a href="http://paperpile.com/b/bZjajr/LTAw">Gorgolewski KJ, Auer T, Calhoun VD, Craddock RC, Das S, Duff EP, et al.&nbsp;The brain imaging data structure, a format for organizing and describing outputs of neuroimaging experiments. Sci Data. 2016;3: 160044.</a></p>
+<p>13. <a href="http://paperpile.com/b/bZjajr/u0hh">Robbins K, Truong D, Appelhoff S, Delorme A, Makeig S. Capturing the nature of events and event context using hierarchical event descriptors (HED). Neuroimage. 2021;245: 118766.</a></p>
+<p>14. <a href="http://paperpile.com/b/bZjajr/3UVA">Hanavan EP Jr.&nbsp;A personalized mathematical model of the human body. J Spacecr Rockets. 1966;3: 446-448.</a></p>
+
+
+</section>
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p><a href="https://github.com/human-sensor-placement/human-sensor-placement.github.io/tree/v0.1.0-alpha">https://github.com/human-sensor-placement/human-sensor-placement.github.io/tree/v0.1.0-alpha</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/human-sensor-placement\.github\.io\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
