@@ -26,6 +26,7 @@ This framework addresses the critical need for standardized sensor placement pro
 
 We welcome contributions from the research community in several key areas:
 
+- Opinions on the preprint and the proposed framework (the preprint is available on arXiv as well as here in the repository as `paper.md`)
 - Standard vocabulary and communication formats through BIDS, HED, and other specifications
 - Validation studies for inter-operator reliability assessment
 - Mappings between this framework and existing standards (such as SENIAM)
